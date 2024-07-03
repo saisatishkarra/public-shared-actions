@@ -28,6 +28,7 @@ jobs:
           tags: user/app:latest
   download-build-summary-report:
     runs-on: ubuntu-latest
+    needs: [build]
     steps:
       -
         name: Download assets
