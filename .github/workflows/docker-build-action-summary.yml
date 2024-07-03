@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  download-build-summary-report:
+  build:
     runs-on: ubuntu-latest
     steps:
       -
@@ -26,6 +26,9 @@ jobs:
           context: .
           file: ./psa/Dockerfile
           tags: user/app:latest
-      - 
+  download-build-summary-report:
+    runs-on: ubuntu-latest
+    steps:
+      -
         name: Download assets
         uses: actions/download-artifact@v4
