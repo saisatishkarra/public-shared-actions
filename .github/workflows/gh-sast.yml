@@ -1,0 +1,56 @@
+name: GH Actions SAST
+
+on:
+  pull_request: {}
+  merge_group: {}
+  push:
+    paths:
+      - '.github/workflows/*'
+  workflow_dispatch: {}
+
+jobs:
+
+  lint:
+    runs-on: ubuntu-24.04
+    continue-on-error: true
+    name: Lint
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - uses: reviewdog/action-actionlint@f3dcc52bc6039e5d736486952379dce3e869e8a2
+        #with:
+          # # shellcheck is enabled on scripts using the run: block within workflows
+          # level: warnning
+          # # When used as required workflow in ruleset, this parameter has can block pushes
+          # fail_level: none
+      - uses: reviewdog/action-shellcheck@22f96e34e9185b642c5567cc26d1df952f5c9d10
+        with:
+          # level: warnning
+          # fail_level: none'
+          reporter: "github-check"
+          check_all_files_with_shebangs: "true"
+
+  analyze-anti-patterns:
+    runs-on: ubuntu-24.04
+    continue-on-error: true
+    permissions:
+      security-events: write # publish sbom to GH releases/tag assets
+      actions: read
+      contents: read
+    needs: lint
+    if: needs.lint.result == 'success'
+    steps:
+      # Helps to run the scan on a local directory at the triggered ref
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - name: Run CI sanitize
+        id: sanitize-ci
+        uses: ./security-actions/scan-gh-workflows
+        with:
+          scan_path: ${{github.workspace}}
+          persona: 'pedantic'
+          # When used as required workflow in ruleset, this parameter has can block pushes
+          fail_on_findings: false 
+          codeql_upload: false
+          github_token: ${{github.token}}
