@@ -104,7 +104,7 @@ runs:
         GH_TOKEN: ${{ inputs.github_token }}
 
     - name: Upload GH Actions SAST reports to Workflow
-      if: always()
+      if: always() && steps.gh_actions_sast_plain.conclusion == 'success' && steps.gh_actions_sast_sarif.conclusion == 'success'
       uses: actions/upload-artifact@v4
       with:
         name: ${{ steps.meta.outputs.report_file_name }}.zip
@@ -113,18 +113,18 @@ runs:
           ${{ steps.meta.outputs.out_file}}
         if-no-files-found: warn
     
-    - name: Add findings as check summary
-      if: always() 
-      shell: bash
-      run: |
-        if [[ -f "${OUT_FILE}" ]]; then
-          echo "## GH Actions SAST CI Scan Summary Report" >> $GITHUB_STEP_SUMMARY
-          while IFS= read -r line; do
-            echo "- $line" >> $GITHUB_STEP_SUMMARY
-          done < ${OUT_FILE}
-        fi
-      env:
-        OUT_FILE: ${{ steps.meta.outputs.out_file}}
+    # - name: Add findings as check summary
+    #   if: always() 
+    #   shell: bash
+    #   run: |
+    #     if [[ -f "${OUT_FILE}" ]]; then
+    #       echo "## GH Actions SAST CI Scan Summary Report" >> $GITHUB_STEP_SUMMARY
+    #       while IFS= read -r line; do
+    #         echo "- $line" >> $GITHUB_STEP_SUMMARY
+    #       done < ${OUT_FILE}
+    #     fi
+    #   env:
+    #     OUT_FILE: ${{ steps.meta.outputs.out_file}}
 
     - name: Print to console out
       if: always() 
