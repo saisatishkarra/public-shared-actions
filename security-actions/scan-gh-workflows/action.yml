@@ -139,10 +139,13 @@ runs:
         OUT_FILE: ${{ steps.meta.outputs.out_file}}
 
     - name: Fail on findings
-      if: ${{ always() && steps.gh_actions_sast_plain.outcome == 'failure' && env.fail_build == 'true' }}
+      if: always()
       shell: bash
       run: |
-        echo "::error::Semgrep has detected findings. For findings, check workflow artifact: semgrep_sast.zip / Github Security analysis"
-        exit 1
+        if [[ ${SCAN_STATUS} == 'failure' ]] && [[ ${FAIL_BUILD} == 'true' ]]; then
+          echo "::error::zizmor has detected findings. For findings, check workflow artifact: gh-ci-sast-report.zip / Github Security analysis"
+          exit 1
+        fi
       env: 
+        SCAN_STATUS: ${{ steps.gh_actions_sast_plain.outcome }}
         FAIL_BUILD: ${{ steps.meta.outputs.global_enforce_build_failure == 'true' && steps.meta.outputs.global_enforce_build_failure || inputs.fail_on_findings }}

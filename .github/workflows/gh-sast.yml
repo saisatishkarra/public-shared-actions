@@ -20,10 +20,10 @@ jobs:
       - uses: reviewdog/action-shellcheck@6e0e63d1750d02d761b3df0f2c5ba9f9ac4a9ed7
         with:
           # When used as required workflow in ruleset, this parameter has can block pushes
-          fail_level: any
+          fail_level: ${{secrets.FAIL_SHELL_CHECK}}
           # Run for all sh files even when not added/modified
-          filter_mode: nofilter
-          #filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
+          #filter_mode: nofilter
+          filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
           reporter: ${{ github.event_name == 'pull_request' && 'github-pr-check' || 'github-check' }}
           check_all_files_with_shebangs: "true"
 
@@ -67,6 +67,17 @@ jobs:
           path: |
             ghlint-report.sarif
           if-no-files-found: warn
+      
+      - name: Fail on findings
+        if: always()
+        run: |
+          if [[ ${SCAN_STATUS} == 'failure' ]] && [[ ${FAIL_BUILD} == 'true' ]]; then
+            echo "::error::ghlint has detected findings. For findings, check workflow artifact: ghlint-report.zip / Github Security analysis"
+            exit 1
+          fi
+        env: 
+          SCAN_STATUS: ${{ steps.ghlint.outcome }}
+          FAIL_BUILD: "${{secrets.FAIL_GHLINT}}"
           
       # - name: "Publish 'GH-Lint' GitHub Code Scanning analysis."
       #   if: ${{  }}
@@ -87,7 +98,7 @@ jobs:
       - uses: reviewdog/action-actionlint@f3dcc52bc6039e5d736486952379dce3e869e8a2
         with:
           # When used as required workflow in ruleset, this parameter has can block pushes
-          fail_level: any
+          fail_level: ${{secrets.FAIL_ACTIONLINT}}
           # Run for all sh files even when not added/modified
           filter_mode: nofilter
           #filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
@@ -109,6 +120,6 @@ jobs:
           scan_path: ${{github.workspace}}
           persona: 'pedantic'
           # When used as required workflow in ruleset, this parameter has can block pushes
-          fail_on_findings: true 
+          fail_on_findings: ${{secrets.FAIL_ZIZMOR}}
           codeql_upload: false
           github_token: ${{github.token}}

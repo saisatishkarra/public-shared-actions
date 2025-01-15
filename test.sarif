@@ -1,0 +1,2811 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "originalUriBaseIds": {
+        "%SRCROOT%": {
+          "uri": "file:///app/"
+        }
+      },
+      "results": [
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/build-sdk-js.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 20,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-build-sdk-js] is missing permissions."
+          },
+          "ruleId": "MissingJobPermissions"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/build-sdk-js.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 20,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-build-sdk-js] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/build-sdk-js.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 21,
+                  "startColumn": 7,
+                  "startLine": 21
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-build-sdk-js] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/build-sdk-js.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 22,
+                  "startColumn": 7,
+                  "startLine": 22
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-build-sdk-js] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/build-sdk-js.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 26,
+                  "startColumn": 7,
+                  "startLine": 26
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[./code-build-actions/build-js-sdk] in Job[test-build-sdk-js] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/build-sdk-js.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 26,
+                  "startColumn": 7,
+                  "startLine": 26
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "`token` input in Step[./code-build-actions/build-js-sdk] in Job[test-build-sdk-js] should use `github.token` in `${{secrets.GITHUB_TOKEN}}`."
+          },
+          "ruleId": "PreferGitHubToken"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/ci.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 17,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[setup-and-lint] should have explicit permissions."
+          },
+          "ruleId": "ExplicitJobPermissions"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/ci.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 21,
+                  "endLine": 46,
+                  "startColumn": 3,
+                  "startLine": 46
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[slack_notification] should have explicit permissions."
+          },
+          "ruleId": "ExplicitJobPermissions"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/ci.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 21,
+                  "endLine": 46,
+                  "startColumn": 3,
+                  "startLine": 46
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[slack_notification] should have a lower-case kebab ID."
+          },
+          "ruleId": "JobIdNaming"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/ci.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 17,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[setup-and-lint] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/ci.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 21,
+                  "endLine": 46,
+                  "startColumn": 3,
+                  "startLine": 46
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[slack_notification] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/ci.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 18,
+                  "startColumn": 7,
+                  "startLine": 18
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[setup-and-lint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/ci.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 17,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[setup-and-lint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingJobName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/ci.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 34,
+                  "startColumn": 7,
+                  "startLine": 34
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[\"Install Dependencies\"] in Job[setup-and-lint] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/ci.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 43,
+                  "startColumn": 7,
+                  "startLine": 43
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[\"Run ESLint\"] in Job[setup-and-lint] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/dir-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 15,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-sca-dir] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/dir-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 10,
+                  "endLine": 26,
+                  "startColumn": 9,
+                  "startLine": 26
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-sca-dir] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/dir-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 10,
+                  "endLine": 27,
+                  "startColumn": 9,
+                  "startLine": 27
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-sca-dir] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-provenance.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 22,
+                  "endLine": 17,
+                  "startColumn": 3,
+                  "startLine": 17
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[provenance-metadata] is missing permissions."
+          },
+          "ruleId": "MissingJobPermissions"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-provenance.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 30,
+                  "startColumn": 5,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[provenance-metadata] should have a lower-case kebab ID."
+          },
+          "ruleId": "StepIdNaming"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-provenance.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 22,
+                  "endLine": 17,
+                  "startColumn": 3,
+                  "startLine": 17
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[provenance-metadata] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-provenance.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 25,
+                  "startColumn": 5,
+                  "startLine": 25
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v3] in Job[provenance-metadata] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-provenance.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 30,
+                  "startColumn": 5,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[provenance-metadata] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-provenance.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 30,
+                  "startColumn": 5,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[provenance-metadata] should be formatted as `>> \"${GITHUB_OUTPUT}\"`."
+          },
+          "ruleId": "SafeEnvironmentFileRedirect"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-provenance.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 30,
+                  "startColumn": 5,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[provenance-metadata] should be formatted as `>> \"${GITHUB_OUTPUT}\"`."
+          },
+          "ruleId": "SafeEnvironmentFileRedirect"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 32,
+                  "startColumn": 5,
+                  "startLine": 32
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[\"Login to DockerHub\"] in Job[test-scan-docker-image] does not have double-curly-braces."
+          },
+          "ruleId": "DoubleCurlyIf"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 59,
+                  "startColumn": 5,
+                  "startLine": 59
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[sbom_action_amd64] in Job[test-scan-docker-image] does not have double-curly-braces."
+          },
+          "ruleId": "DoubleCurlyIf"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 70,
+                  "startColumn": 5,
+                  "startLine": 70
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[sbom_action_arm64] in Job[test-scan-docker-image] does not have double-curly-braces."
+          },
+          "ruleId": "DoubleCurlyIf"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 25,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-scan-docker-image] has similar step identifiers: `sbom_action_amd64` and `sbom_action_arm64`."
+          },
+          "ruleId": "SimilarStepId"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 21,
+                  "endLine": 80,
+                  "startColumn": 3,
+                  "startLine": 80
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-download-sbom] is missing permissions."
+          },
+          "ruleId": "MissingJobPermissions"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 39,
+                  "startColumn": 5,
+                  "startLine": 39
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[test-scan-docker-image] should have a lower-case kebab ID."
+          },
+          "ruleId": "StepIdNaming"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 59,
+                  "startColumn": 5,
+                  "startLine": 59
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[sbom_action_amd64] in Job[test-scan-docker-image] should have a lower-case kebab ID."
+          },
+          "ruleId": "StepIdNaming"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 70,
+                  "startColumn": 5,
+                  "startLine": 70
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[sbom_action_arm64] in Job[test-scan-docker-image] should have a lower-case kebab ID."
+          },
+          "ruleId": "StepIdNaming"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 91,
+                  "startColumn": 7,
+                  "startLine": 91
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[collect_sbom] in Job[test-download-sbom] should have a lower-case kebab ID."
+          },
+          "ruleId": "StepIdNaming"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 25,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-scan-docker-image] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 21,
+                  "endLine": 80,
+                  "startColumn": 3,
+                  "startLine": 80
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-download-sbom] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 27,
+                  "startColumn": 5,
+                  "startLine": 27
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-scan-docker-image] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 39,
+                  "startColumn": 5,
+                  "startLine": 39
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[test-scan-docker-image] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 91,
+                  "startColumn": 7,
+                  "startLine": 91
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[collect_sbom] in Job[test-download-sbom] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 96,
+                  "startColumn": 7,
+                  "startLine": 96
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[\"Inspect download assets\"] in Job[test-download-sbom] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 21,
+                  "endLine": 80,
+                  "startColumn": 3,
+                  "startLine": 80
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "`GH_TOKEN` environment variable in Job[test-download-sbom] should use `github.token` in `${{ secrets.GITHUB_TOKEN }}`."
+          },
+          "ruleId": "PreferGitHubToken"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 39,
+                  "startColumn": 5,
+                  "startLine": 39
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[test-scan-docker-image] should be formatted as `>> \"${GITHUB_OUTPUT}\"`."
+          },
+          "ruleId": "SafeEnvironmentFileRedirect"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 39,
+                  "startColumn": 5,
+                  "startLine": 39
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[test-scan-docker-image] should be formatted as `>> \"${GITHUB_OUTPUT}\"`."
+          },
+          "ruleId": "SafeEnvironmentFileRedirect"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 39,
+                  "startColumn": 5,
+                  "startLine": 39
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[test-scan-docker-image] should be formatted as `>> \"${GITHUB_OUTPUT}\"`."
+          },
+          "ruleId": "SafeEnvironmentFileRedirect"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 91,
+                  "startColumn": 7,
+                  "startLine": 91
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[collect_sbom] in Job[test-download-sbom] shell script contains GitHub Expressions."
+          },
+          "ruleId": "ShellScriptInjection"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-scan.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 96,
+                  "startColumn": 7,
+                  "startLine": 96
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[\"Inspect download assets\"] in Job[test-download-sbom] shell script contains GitHub Expressions."
+          },
+          "ruleId": "ShellScriptInjection"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 53,
+                  "startColumn": 5,
+                  "startLine": 53
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[sign_image] in Job[test-sign-docker-image] does not have double-curly-braces."
+          },
+          "ruleId": "DoubleCurlyIf"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 75,
+                  "startColumn": 5,
+                  "startLine": 75
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[sign_image_v1] in Job[test-sign-docker-image] does not have double-curly-braces."
+          },
+          "ruleId": "DoubleCurlyIf"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 35,
+                  "startColumn": 5,
+                  "startLine": 35
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[test-sign-docker-image] should have a lower-case kebab ID."
+          },
+          "ruleId": "StepIdNaming"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 53,
+                  "startColumn": 5,
+                  "startLine": 53
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[sign_image] in Job[test-sign-docker-image] should have a lower-case kebab ID."
+          },
+          "ruleId": "StepIdNaming"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 75,
+                  "startColumn": 5,
+                  "startLine": 75
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[sign_image_v1] in Job[test-sign-docker-image] should have a lower-case kebab ID."
+          },
+          "ruleId": "StepIdNaming"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 25,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-sign-docker-image] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 30,
+                  "startColumn": 5,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v3] in Job[test-sign-docker-image] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 35,
+                  "startColumn": 5,
+                  "startLine": 35
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[test-sign-docker-image] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 66,
+                  "startColumn": 5,
+                  "startLine": 66
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[\"Push Images\"] in Job[test-sign-docker-image] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 35,
+                  "startColumn": 5,
+                  "startLine": 35
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[test-sign-docker-image] should be formatted as `>> \"${GITHUB_OUTPUT}\"`."
+          },
+          "ruleId": "SafeEnvironmentFileRedirect"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/docker-image-sign.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 35,
+                  "startColumn": 5,
+                  "startLine": 35
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[image_manifest_metadata] in Job[test-sign-docker-image] should be formatted as `>> \"${GITHUB_OUTPUT}\"`."
+          },
+          "ruleId": "SafeEnvironmentFileRedirect"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 62,
+                  "startColumn": 7,
+                  "startLine": 62
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[\"Upload GH lint report to Workflow\"] in Job[ghlint] does not have double-curly-braces."
+          },
+          "ruleId": "DoubleCurlyIf"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 62,
+                  "startColumn": 7,
+                  "startLine": 62
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[\"Upload GH lint report to Workflow\"] in Job[ghlint] uses the always() condition."
+          },
+          "ruleId": "NeverUseAlways"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 11,
+                  "startColumn": 3,
+                  "startLine": 11
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[shellcheck] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 9,
+                  "endLine": 30,
+                  "startColumn": 3,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[ghlint] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 78,
+                  "startColumn": 3,
+                  "startLine": 78
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[actionlint] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 24,
+                  "endLine": 96,
+                  "startColumn": 3,
+                  "startLine": 96
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[analyze-anti-patterns] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 18,
+                  "startColumn": 7,
+                  "startLine": 18
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11] in Job[shellcheck] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 20,
+                  "startColumn": 7,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[reviewdog/action-shellcheck@6e0e63d1750d02d761b3df0f2c5ba9f9ac4a9ed7] in Job[shellcheck] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 37,
+                  "startColumn": 7,
+                  "startLine": 37
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11] in Job[ghlint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 85,
+                  "startColumn": 7,
+                  "startLine": 85
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11] in Job[actionlint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 87,
+                  "startColumn": 7,
+                  "startLine": 87
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[reviewdog/action-actionlint@f3dcc52bc6039e5d736486952379dce3e869e8a2] in Job[actionlint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 104,
+                  "startColumn": 7,
+                  "startLine": 104
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11] in Job[analyze-anti-patterns] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 24,
+                  "endLine": 96,
+                  "startColumn": 3,
+                  "startLine": 96
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[analyze-anti-patterns] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingJobName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 38,
+                  "startColumn": 7,
+                  "startLine": 38
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[\"Download GH-Lint\"] in Job[ghlint] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 47,
+                  "startColumn": 7,
+                  "startLine": 47
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[ghlint] in Job[ghlint] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/gh-sast.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 47,
+                  "startColumn": 7,
+                  "startLine": 47
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[ghlint] in Job[ghlint] shell script contains GitHub Expressions."
+          },
+          "ruleId": "ShellScriptInjection"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/lua-lint.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 16,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-lua-lint] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/lua-lint.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 26,
+                  "startColumn": 7,
+                  "startLine": 26
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-lua-lint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/lua-lint.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 27,
+                  "startColumn": 7,
+                  "startLine": 27
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-lua-lint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/lua-lint.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 31,
+                  "startColumn": 7,
+                  "startLine": 31
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[./code-check-actions/lua-lint] in Job[test-lua-lint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/release.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 21,
+                  "endLine": 64,
+                  "startColumn": 3,
+                  "startLine": 64
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[slack_notification] should have explicit permissions."
+          },
+          "ruleId": "ExplicitJobPermissions"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/release.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 21,
+                  "endLine": 64,
+                  "startColumn": 3,
+                  "startLine": 64
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[slack_notification] should have a lower-case kebab ID."
+          },
+          "ruleId": "JobIdNaming"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/release.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 10,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[release] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/release.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 21,
+                  "endLine": 64,
+                  "startColumn": 3,
+                  "startLine": 64
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[slack_notification] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/release.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 41,
+                  "startColumn": 7,
+                  "startLine": 41
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[\"Install dependencies\"] in Job[release] is missing a shell, specify `bash` for better error handling."
+          },
+          "ruleId": "MissingShell"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/rust-lint.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 17,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-rust-lint] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/rust-lint.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 29,
+                  "startColumn": 7,
+                  "startLine": 29
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-rust-lint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/rust-lint.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 30,
+                  "startColumn": 7,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-rust-lint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/rust-lint.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 34,
+                  "startColumn": 7,
+                  "startLine": 34
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[./code-check-actions/rust-lint] in Job[test-rust-lint] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/rust-lint.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 34,
+                  "startColumn": 7,
+                  "startLine": 34
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "`token` input in Step[./code-check-actions/rust-lint] in Job[test-rust-lint] should use `github.token` in `${{secrets.GITHUB_TOKEN}}`."
+          },
+          "ruleId": "PreferGitHubToken"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/rust-sca.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 16,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-rust-sca] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/rust-sca.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 29,
+                  "startColumn": 7,
+                  "startLine": 29
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-rust-sca] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/rust-sca.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 30,
+                  "startColumn": 7,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[test-rust-sca] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/rust-sca.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 34,
+                  "startColumn": 7,
+                  "startLine": 34
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[./security-actions/scan-rust] in Job[test-rust-sca] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/semgrep.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 10,
+                  "endLine": 13,
+                  "startColumn": 3,
+                  "startLine": 13
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[semgrep] does not have double-curly-braces."
+          },
+          "ruleId": "DoubleCurlyIf"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/semgrep.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 10,
+                  "endLine": 13,
+                  "startColumn": 3,
+                  "startLine": 13
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[semgrep] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/semgrep.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 27,
+                  "startColumn": 7,
+                  "startLine": 27
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[semgrep] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/semgrep.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 28,
+                  "startColumn": 7,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[actions/checkout@v4] in Job[semgrep] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/semgrep.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 33,
+                  "startColumn": 7,
+                  "startLine": 33
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Step[./security-actions/semgrep] in Job[semgrep] is missing a name, add one to improve developer experience."
+          },
+          "ruleId": "MissingStepName"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/semgrep.yml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 8,
+                  "endLine": 28,
+                  "startColumn": 7,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "`token` input in Step[actions/checkout@v4] in Job[semgrep] should use `github.token` in `${{secrets.GITHUB_TOKEN}}`."
+          },
+          "ruleId": "PreferGitHubToken"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/test-slack-actions.yaml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 36,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-slack-workflow-notifications] is missing permissions."
+          },
+          "ruleId": "MissingJobPermissions"
+        },
+        {
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": ".github/workflows/test-slack-actions.yaml",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 36,
+                  "endLine": 15,
+                  "startColumn": 3,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Job[test-slack-workflow-notifications] is missing `timeout-minutes`."
+          },
+          "ruleId": "MissingJobTimeout"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullName": "GH-Lint 0.5.0",
+          "name": "GH-Lint",
+          "rules": [
+            {
+              "fullDescription": {
+                "markdown": "A syntactically correct YAML file is required to ensure the YAML file can be loaded.\n\nFix the problems in the workflow file to make it a valid YAML file.\n\nGitHub would also very likely reject the file with an error message similar to:\n```\nInvalid workflow file: .github/workflows/test.yml#L5\nThe workflow is not valid. .github/workflows/test.yml (Line: 5, Col: 17): Error message\n```",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "A syntactically correct YAML file is required to ensure the YAML file can be loaded.\n\nFix the problems in the workflow file to make it a valid YAML file.\n\nGitHub would also very likely reject the file with an error message similar to:\n```\nInvalid workflow file: .github/workflows/test.yml#L5\nThe workflow is not valid. .github/workflows/test.yml (Line: 5, Col: 17): Error message\n```\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    uses: reusable/workflow.yml\n```\nValid yaml file.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n\texample:\n\t\tuses: reusable/workflow.yml\n```\nTabs cannot be used as indentation.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/YamlSyntaxError/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/YamlSyntaxError/",
+              "id": "YamlSyntaxError",
+              "name": "YAML syntax error.",
+              "shortDescription": {
+                "text": "YAML syntax error."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "A semantically correct YAML file is required to ensure the GH-Lint object model is valid.\n\nFix the problems in the workflow file to make it a valid workflow or action YAML file.\n\nGitHub would also very likely reject the file with an error message similar to:\n```\nInvalid workflow file: .github/workflows/test.yml#L5\nThe workflow is not valid. .github/workflows/test.yml (Line: 5, Col: 17): Error message\n```",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "A semantically correct YAML file is required to ensure the GH-Lint object model is valid.\n\nFix the problems in the workflow file to make it a valid workflow or action YAML file.\n\nGitHub would also very likely reject the file with an error message similar to:\n```\nInvalid workflow file: .github/workflows/test.yml#L5\nThe workflow is not valid. .github/workflows/test.yml (Line: 5, Col: 17): Error message\n```\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    uses: reusable/workflow.yml\n```\nValid yaml file.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\n```\nJobs is required for a workflow, otherwise the work cannot be declared.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/YamlLoadError/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/YamlLoadError/",
+              "id": "YamlLoadError",
+              "name": "YAML loading error.",
+              "shortDescription": {
+                "text": "YAML loading error."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "JSON-Schema validation is required to ensure the GH-Lint object model is valid.\n\nFix the problems in the workflow file\nto make it validate against the JSON schema for the corresponding file type.\n\nGitHub would also very likely reject the file with an error message similar to:\n```\nInvalid workflow file: .github/workflows/test.yml#L5\nThe workflow is not valid. .github/workflows/test.yml (Line: 5, Col: 17): Error message\n```",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "JSON-Schema validation is required to ensure the GH-Lint object model is valid.\n\nFix the problems in the workflow file\nto make it validate against the JSON schema for the corresponding file type.\n\nGitHub would also very likely reject the file with an error message similar to:\n```\nInvalid workflow file: .github/workflows/test.yml#L5\nThe workflow is not valid. .github/workflows/test.yml (Line: 5, Col: 17): Error message\n```\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nMinimal valid workflow.\n\n## Non-compliant examples\n\n### Non-compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs: {}\n```\nRequires at least one job in `jobs:`.\n\n### Non-compliant example #2\n_`example.yml`_\n```yaml\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nMissing `on:` trigger list.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/JsonSchemaValidation/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/JsonSchemaValidation/",
+              "id": "JsonSchemaValidation",
+              "name": "JSON-Schema based validation problem.",
+              "shortDescription": {
+                "text": "JSON-Schema based validation problem."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Workflow complexity is too high.\n\nConsider the following refactors to reduce complexity:\n * Introduce a matrix to reduce duplication.\n * Split the workflow into multiple nested workflows with `workflow_call`.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Workflow complexity is too high.\n\nConsider the following refactors to reduce complexity:\n * Introduce a matrix to reduce duplication.\n * Split the workflow into multiple nested workflows with `workflow_call`.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nSimple workflow with only a single job.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example1:\n    uses: other/workflow.yml\n  example2:\n    uses: other/workflow.yml\n  example3:\n    uses: other/workflow.yml\n  example4:\n    uses: other/workflow.yml\n  example5:\n    uses: other/workflow.yml\n  example6:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n  example7:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n  example8:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n  example9:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n  example10:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n  example11:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nComplex workflow with 5 reusable workflow calls and 5 normal jobs.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/TooManyJobs/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/TooManyJobs/",
+              "id": "TooManyJobs",
+              "name": "Workflow has too many jobs.",
+              "shortDescription": {
+                "text": "Workflow has too many jobs."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Job complexity is too high.\n\nConsider the following refactors to reduce complexity:\n * Remove unused steps.\n * Split up job into meaningful smaller jobs with `needs` dependencies.\n * Extract tightly coupled steps into a composite action.\n * Extract common steps into a reusable composite action.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Job complexity is too high.\n\nConsider the following refactors to reduce complexity:\n * Remove unused steps.\n * Split up job into meaningful smaller jobs with `needs` dependencies.\n * Extract tightly coupled steps into a composite action.\n * Extract common steps into a reusable composite action.\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: echo \"Example\"\n      - run: echo \"Example\"\n      - run: echo \"Example\"\n```\nSimple job with only a few steps.\n\n### Compliant example #2\n_`action.yml`_\n```yaml\nname: Test\ndescription: Test\nruns:\n  using: composite\n  steps:\n    - uses: actions/checkout@v4\n    - run: echo \"Example\"\n      shell: bash\n    - run: echo \"Example\"\n      shell: bash\n    - run: echo \"Example\"\n      shell: bash\n```\nSimple action with only a few steps.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example 1\"\n      - run: echo \"Example 2\"\n      - run: echo \"Example 3\"\n      - run: echo \"Example 4\"\n      - run: echo \"Example 5\"\n      - run: echo \"Example 6\"\n      - run: echo \"Example 7\"\n      - run: echo \"Example 8\"\n      - run: echo \"Example 9\"\n      - run: echo \"Example 10\"\n      - run: echo \"Example 11\"\n      - run: echo \"Example 12\"\n      - run: echo \"Example 13\"\n      - run: echo \"Example 14\"\n      - run: echo \"Example 15\"\n      - run: echo \"Example 16\"\n      - run: echo \"Example 17\"\n      - run: echo \"Example 18\"\n      - run: echo \"Example 19\"\n      - run: echo \"Example 20\"\n      - run: echo \"Example 21\"\n```\nComplex job with 20 steps.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/TooManySteps/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/TooManySteps/",
+              "id": "TooManySteps",
+              "name": "Job has too many steps.",
+              "shortDescription": {
+                "text": "Job has too many steps."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Omitting, or over-using the double-curly-braces (`${{ }}`) can lead to unexpected behavior.\n\nWhile the [GitHub Actions Expressions documentation](https://docs.github.com/en/actions/learn-github-actions/expressions)\nhas a note for `${{ }}` being optional for `if:`s.\nThe `if:` being an exception also has an exception,\nas [documented on conditionals](https://docs.github.com/en/actions/using-jobs/using-conditions-to-control-job-execution).\n\nThe optionality listed above probably causes more problems than keystrokes it saves,\nand therefore it's strongly recommended to always wrap the full `if:` condition in `${{ }}`.\n\nIf you find the examples confusing (I definitely did), the more reason to always use it.\nSimple rule, consistent outcomes.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Omitting, or over-using the double-curly-braces (`${{ }}`) can lead to unexpected behavior.\n\nWhile the [GitHub Actions Expressions documentation](https://docs.github.com/en/actions/learn-github-actions/expressions)\nhas a note for `${{ }}` being optional for `if:`s.\nThe `if:` being an exception also has an exception,\nas [documented on conditionals](https://docs.github.com/en/actions/using-jobs/using-conditions-to-control-job-execution).\n\nThe optionality listed above probably causes more problems than keystrokes it saves,\nand therefore it's strongly recommended to always wrap the full `if:` condition in `${{ }}`.\n\nIf you find the examples confusing (I definitely did), the more reason to always use it.\nSimple rule, consistent outcomes.\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    if: ${{ ! startsWith(github.ref, 'refs/tags/') }}\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\n`if:`s starting with a `!` must always be wrapped in double-curly-braces.\n\n### Compliant example #2\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        if: ${{ steps.calculation.outputs.result == 'world' }}\n```\nTo avoid confusion, `if:` is fully wrapped in double-curly-braces.\n\n## Non-compliant examples\n\n### Non-compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        if: ! startsWith(github.ref, 'refs/tags/')\n```\nWhen `if:` starts with `!`, it's going to break the condition.\nA string value starting with `!` is reserved syntax in YAML.\n\n### Non-compliant example #2\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        if: github.context.variable == 'example'\n#     - run: echo \"Example\"\n#       if: 'example' == github.context.variable\n```\nSimple comparison is non-commutative due to YAML syntax.\nThe first step in this example will work correctly,\nbut as soon as the condition order is swapped around the YAML doesn't even parse:\n```log\nwhile parsing a block mapping\n in reader, line 3, column 5:\n        if: 'bbb' == github.context.variable\n        ^\nexpected <block end>, but found '<scalar>'\n in reader, line 3, column 15:\n        if: 'bbb' == github.context.variable\n                  ^\n```\nThis is very confusing as commutativity is one of the basics of boolean math in programming languages.\nEspecially for a simple thing like equality.\nIn case both of these are wrapped in double-curly-braces, the order doesn't matter, and it \"just works\".\n\n### Non-compliant example #3\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"result=hello\" >> \"${GITHUB_OUTPUT}\"\n        id: calculation\n      - run: echo \"Example\"\n        if: ${{ steps.calculation.outputs.result }} == 'world'\n```\nThe `if:` condition is wrapped in double-curly-braces, but only partially.\nLooking at the expression, it might be interpreted (by humans) as a valid string comparison,\nbecause the GitHub Actions Context variable is wrapped in an Expression as expected.\n\nHowever, this condition will **always** evaluate to `true`:\nThe way to interpret this expression is as follows:\n\n * Evaluate `steps.calculation.outputs.result` -> `'hello'`\n * Substitute `'hello'` -> `if: hello == 'world'`\n * Evaluate `\"hello == 'world'\"` -> `true`\n\nThis last step might be surprising, but after substituting the expressions,\nGitHub Actions just leaves us with a YAML String.\nThat string is then passed to `if`, but it's a non-empty string, which is truthy.\n\nTo confirm this, you can run a workflow with step debugging turned on, and you'll see this:\n```log\nEvaluating: (success() && format('{0} == ''world''', steps.calculation.outputs.result))\n```\n\n### Non-compliant example #4\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        if: ${{ github.event.pull_request.additions > 10 }} && ${{ github.event.pull_request.draft }}\n```\nThe `if:` condition is wrapped in double-curly-braces, but only partially.\nLooking at the expression, it might be interpreted (by humans) as a valid boolean expression,\nbecause the GitHub Actions Context variable accesses are wrapped in an Expression as expected.\n\nHowever, this condition will **always** evaluate to `true`.\n\nThe way to interpret this expression is as follows:\n\n * Evaluate first `interface kotlin.jvm.functions.Function0` -> for example `true`\n * Evaluate second `interface kotlin.jvm.functions.Function0` -> for example `false`\n * Substitute expressions -> `if: 'true && false'`\n * Evaluate `'true && false'` -> `true`\n\nThis last step might be surprising, but after substituting the expressions,\nGitHub Actions just leaves us with a YAML String.\nThat string is then passed to `if`, but it's a non-empty string, which is truthy.\n\nTo confirm this, you can run a workflow with step debugging turned on, and you'll see this:\n```log\nEvaluating: (success() && format('{0} && {1}', ..., ...))\n```\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/DoubleCurlyIf/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/DoubleCurlyIf/",
+              "id": "DoubleCurlyIf",
+              "name": "if: is not wrapped in double-curly-braces.",
+              "shortDescription": {
+                "text": "if: is not wrapped in double-curly-braces."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Multiple steps having a shell defined causes noise.\nStep shells should be uniform for each job, since each step is executed on the same runner.\n\nRelevant documentation:\n\n * [`jobs.<job_id>.steps[*].shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell)\n * [`jobs.<job_id>.defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_iddefaultsrun)",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Multiple steps having a shell defined causes noise.\nStep shells should be uniform for each job, since each step is executed on the same runner.\n\nRelevant documentation:\n\n * [`jobs.<job_id>.steps[*].shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell)\n * [`jobs.<job_id>.defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_iddefaultsrun)\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        shell: bash\n```\nOnly one step has shell.\n\n### Compliant example #2\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    defaults:\n      run:\n        shell: bash\n    steps:\n      - run: echo \"Example\"\n      - run: echo \"Example\"\n```\nDefault shell is defined for the job.\n\n### Compliant example #3\n_`action.yml`_\n```yaml\nname: Test\ndescription: Test\nruns:\n  using: composite\n  steps:\n    - run: echo \"Example\"\n      shell: bash\n    - run: echo \"Example\"\n      shell: bash\n```\nShell is mandatory on every step in composite actions.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        shell: bash\n      - run: echo \"Example\"\n        shell: bash\n```\nMultiple steps have shell.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/DuplicateShellOnSteps/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/DuplicateShellOnSteps/",
+              "id": "DuplicateShellOnSteps",
+              "name": "Multiple steps have the shell defined.",
+              "shortDescription": {
+                "text": "Multiple steps have the shell defined."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Multiple steps having the same identifier makes them unreferenceable.\nThe `id:` defined on a step becomes a key in the `steps` context.\nIf multiple steps have the same identifier, only one of them will be accessible.\nRemove the one that is not needed, or rename it to be unique.\n\nRelevant documentation:\n\n * [`jobs.<job_id>.steps[*].id`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsid)\n * [`steps` context](https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context)",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Multiple steps having the same identifier makes them unreferenceable.\nThe `id:` defined on a step becomes a key in the `steps` context.\nIf multiple steps have the same identifier, only one of them will be accessible.\nRemove the one that is not needed, or rename it to be unique.\n\nRelevant documentation:\n\n * [`jobs.<job_id>.steps[*].id`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsid)\n * [`steps` context](https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context)\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        id: my-step-id\n      - run: echo \"Example\"\n      - run: echo \"Example\"\n        id: my-other-step-id\n```\nEach step has a unique identifier or no identifier.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        id: my-step-id\n      - run: echo \"Example\"\n        id: my-step-id\n```\nMultiple steps have the same identifier.\n\nThis is very likely a copy-paste mistake.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/DuplicateStepId/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/DuplicateStepId/",
+              "id": "DuplicateStepId",
+              "name": "Steps must have unique identifiers within a job.",
+              "shortDescription": {
+                "text": "Steps must have unique identifiers within a job."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Multiple steps having very similar identifiers makes them hard to distinguish.\n\nIt's hard to read and understand a workflow when steps have similar identifiers,\nthis is especially important for people with dyslexia or ADHD.\n\nThe `id:` defined on a step becomes a key in the `steps` context,\nso it's easy to mistakenly reference another unintended one.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Multiple steps having very similar identifiers makes them hard to distinguish.\n\nIt's hard to read and understand a workflow when steps have similar identifiers,\nthis is especially important for people with dyslexia or ADHD.\n\nThe `id:` defined on a step becomes a key in the `steps` context,\nso it's easy to mistakenly reference another unintended one.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        id: my-step-id\n      - run: echo \"Example\"\n      - run: echo \"Example\"\n        id: my-other-step-id\n```\nEach step has a distinguishable identifier or no identifier.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        id: my-step-id\n      - run: echo \"Example\"\n        id: wy-step-id\n```\nIdentifier of the two steps are very similar.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/SimilarStepId/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/SimilarStepId/",
+              "id": "SimilarStepId",
+              "name": "Steps should have distinguishable identifiers within a job.",
+              "shortDescription": {
+                "text": "Steps should have distinguishable identifiers within a job."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Dead code can lead to confusion.\n\nEmpty environment variable listing is not necessary, that is the default.\nGitHub Actions treats empty env and missing env the same way,\nbecause the differently scoped env listings are additive.\n\nRemove the `env` section, if it is empty.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Dead code can lead to confusion.\n\nEmpty environment variable listing is not necessary, that is the default.\nGitHub Actions treats empty env and missing env the same way,\nbecause the differently scoped env listings are additive.\n\nRemove the `env` section, if it is empty.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nNo env defined.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\nenv: {}\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nEmpty env on workflow.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/EmptyWorkflowEnv/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/EmptyWorkflowEnv/",
+              "id": "EmptyWorkflowEnv",
+              "name": "Workflow has empty env.",
+              "shortDescription": {
+                "text": "Workflow has empty env."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Dead code can lead to confusion.\n\nEmpty environment variable listing is not necessary, that is the default.\nGitHub Actions treats empty env and missing env the same way,\nbecause the differently scoped env listings are additive.\n\nRemove the `env` section, if it is empty.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Dead code can lead to confusion.\n\nEmpty environment variable listing is not necessary, that is the default.\nGitHub Actions treats empty env and missing env the same way,\nbecause the differently scoped env listings are additive.\n\nRemove the `env` section, if it is empty.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nNo env defined.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    env: {}\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nEmpty env on job.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/EmptyJobEnv/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/EmptyJobEnv/",
+              "id": "EmptyJobEnv",
+              "name": "Job has empty env.",
+              "shortDescription": {
+                "text": "Job has empty env."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Dead code can lead to confusion.\n\nEmpty environment variable listing is not necessary, that is the default.\nGitHub Actions treats empty env and missing env the same way,\nbecause the differently scoped env listings are additive.\n\nRemove the `env` section, if it is empty.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Dead code can lead to confusion.\n\nEmpty environment variable listing is not necessary, that is the default.\nGitHub Actions treats empty env and missing env the same way,\nbecause the differently scoped env listings are additive.\n\nRemove the `env` section, if it is empty.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nNo env defined.\n\n## Non-compliant examples\n\n### Non-compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        env: {}\n```\nEmpty env on step.\n\n### Non-compliant example #2\n_`action.yml`_\n```yaml\nname: \"\"\ndescription: \"\"\nruns:\n  using: composite\n  steps:\n    - shell: bash\n      run: echo \"Example\"\n      env: {}\n```\nEmpty env on composite step.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/EmptyStepEnv/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/EmptyStepEnv/",
+              "id": "EmptyStepEnv",
+              "name": "Step has empty env.",
+              "shortDescription": {
+                "text": "Step has empty env."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Most environment files are used to pass data between steps, and should be appended to, not overwritten.\n\nIt is a common mistake to overwrite environment files, which can lead to data loss or unexpected behavior.\n\nUse `>>` instead of `>`, to ensure the file is appended, not overwritten.\n\nReferences:\n\n * [Environment files documentation](https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#environment-files)",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Most environment files are used to pass data between steps, and should be appended to, not overwritten.\n\nIt is a common mistake to overwrite environment files, which can lead to data loss or unexpected behavior.\n\nUse `>>` instead of `>`, to ensure the file is appended, not overwritten.\n\nReferences:\n\n * [Environment files documentation](https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#environment-files)\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"result=Example\" >> $GITHUB_OUTPUT\n```\nAppending to an environment file is usually the intended behavior.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"result=Example\" > $GITHUB_OUTPUT\n```\nOverwriting an environment file is probably unintended.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/EnvironmentFileOverwritten/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/EnvironmentFileOverwritten/",
+              "id": "EnvironmentFileOverwritten",
+              "name": "Environment files should be appended.",
+              "shortDescription": {
+                "text": "Environment files should be appended."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Declaring permissions is essential for a safe usage of the GitHub Actions environment.\nIt helps reduce the attack surface for malicious actors.\n\nThis also prevents accidental leaking of privileged tokens,\nbecause each job will only have the permissions it actually needs.\n\nDeclaring permissions for the `github.token` / `secrets.GITHUB_TOKEN` temporary Access Token is the best practice.\n\nThere are three ways to declare permissions:\n\n * on the repository level\n * on the workflow level\n * on the job level\n\nThe recommended setting is:\n\n * Set the organization/repository level permissions to [\"Read repository contents and packages permissions\"](https://github.blog/changelog/2021-04-20-github-actions-control-permissions-for-github_token/#setting-the-default-permissions-for-the-organization-or-repository).  \n   Sadly, the default is \"Read and write permissions\" (for everything), which is too permissive.\n * Do not declare anything on the workflow level.\n * Declare explicit permissions on the job level.\n\nThis will ensure that the tokens will always have the least privilege.\n\nMost of the time all you need is:\n```yaml\npermissions:\n  contents: read\n```\n\nIt is possible you don't need any permissions at all, in this case put:\n```yaml\npermissions: {}\n```\n\nReferences:\n\n * [Documentation of `GITHUB_TOKEN` permissions](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token)\n * [What can go wrong if a too permissive token leaks?](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#potential-impact-of-a-compromised-runner)\n * [List of Available permissions](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token)",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Declaring permissions is essential for a safe usage of the GitHub Actions environment.\nIt helps reduce the attack surface for malicious actors.\n\nThis also prevents accidental leaking of privileged tokens,\nbecause each job will only have the permissions it actually needs.\n\nDeclaring permissions for the `github.token` / `secrets.GITHUB_TOKEN` temporary Access Token is the best practice.\n\nThere are three ways to declare permissions:\n\n * on the repository level\n * on the workflow level\n * on the job level\n\nThe recommended setting is:\n\n * Set the organization/repository level permissions to [\"Read repository contents and packages permissions\"](https://github.blog/changelog/2021-04-20-github-actions-control-permissions-for-github_token/#setting-the-default-permissions-for-the-organization-or-repository).  \n   Sadly, the default is \"Read and write permissions\" (for everything), which is too permissive.\n * Do not declare anything on the workflow level.\n * Declare explicit permissions on the job level.\n\nThis will ensure that the tokens will always have the least privilege.\n\nMost of the time all you need is:\n```yaml\npermissions:\n  contents: read\n```\n\nIt is possible you don't need any permissions at all, in this case put:\n```yaml\npermissions: {}\n```\n\nReferences:\n\n * [Documentation of `GITHUB_TOKEN` permissions](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token)\n * [What can go wrong if a too permissive token leaks?](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#potential-impact-of-a-compromised-runner)\n * [List of Available permissions](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token)\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: read\n    steps:\n      - run: echo \"Example\"\n```\nPermissions are explicitly declared on the job level.\n\n### Compliant example #2\n_`example.yml`_\n```yaml\non: push\npermissions:\n  contents: read\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nPermissions are explicitly declared on the workflow level.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nNo permissions are declared anywhere.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/MissingJobPermissions/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/MissingJobPermissions/",
+              "id": "MissingJobPermissions",
+              "name": "Permissions are not declared.",
+              "shortDescription": {
+                "text": "Permissions are not declared."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Declaring permissions on the workflow level leads to elevated permissions for all jobs.\nEven if the workflow has only one job, it is better to declare the permissions on the job level,\nthis improves consistency, copy-paste-ability, and forms habits.\n\nMove the permissions declaration from the workflow level to the job level.\n\nReferences:\n\n * [Best practice in documentation](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token:~:text=The%20two,permissions%27%20scope.)\n   > The two workflow[s ...] show the permissions key being used at the job level,\n   > as it is best practice to limit the permissions' scope.\n * [Explanation of the above](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow)\n   > As a good security practice, you should always make sure that actions\n   > only have the minimum access they require by limiting the permissions granted to the GITHUB_TOKEN.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Declaring permissions on the workflow level leads to elevated permissions for all jobs.\nEven if the workflow has only one job, it is better to declare the permissions on the job level,\nthis improves consistency, copy-paste-ability, and forms habits.\n\nMove the permissions declaration from the workflow level to the job level.\n\nReferences:\n\n * [Best practice in documentation](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token:~:text=The%20two,permissions%27%20scope.)\n   > The two workflow[s ...] show the permissions key being used at the job level,\n   > as it is best practice to limit the permissions' scope.\n * [Explanation of the above](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow)\n   > As a good security practice, you should always make sure that actions\n   > only have the minimum access they require by limiting the permissions granted to the GITHUB_TOKEN.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: read\n    steps:\n      - run: echo \"Example\"\n```\nPermissions are explicitly declared on the job level.\n\n## Non-compliant examples\n\n### Non-compliant example #1\n_`example.yml`_\n```yaml\non:\n  pull_request:\npermissions:\n  contents: read\n  pull-requests: write\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: make\n  comment:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: some/publish-comment-action@v0\n```\nPermissions are declared on the workflow level, leading to escalated privileges for all jobs.\n\nThere are two jobs: `build` and `comment`:\n\n * The `build` job needs to access contents to invoke the `make` command.\n * The `comment` job needs to write comments to the pull request.\n\nWith the `permissions:` being declared on the workflow,\nboth jobs will have the same permissions.\nThis leads to a larger attack surface:\n\n * The comment job will be able to read the repository contents.\n   This means that if the publish-comment-action is compromised,\n   it can read/steal the repository contents.\n * The build job will have full access to Pull Requests.\n   This means that if the make command is compromised,\n   it can do anything to PRs.\n\n### Non-compliant example #2\n_`example.yml`_\n```yaml\non: push\npermissions:\n  contents: read\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nPermissions are declared on the workflow level.\n\nNote: This could be actually acceptable, because the workflow has only one job,\nbut for consistency, copy-paste-ability, and habit-forming,\nit's better to still flag it to enforce declaring it on the job level.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/ExplicitJobPermissions/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/ExplicitJobPermissions/",
+              "id": "ExplicitJobPermissions",
+              "name": "Permissions should be declared on the job level.",
+              "shortDescription": {
+                "text": "Permissions should be declared on the job level."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "`actions/upload-artifact` should be configured to fail the CI when no files are found.\n\nWhen the action is not configured to fail on missing files,\nthe action step will be successful even when the artifact is not uploaded.\n\nThere are no branch protection rules to ensure that an artifact is produced,\nso the only way to ensure that the workflows are correct,\nis by failing the action step when the artifact input files are missing.\n\nSee the [`if-no-files-found` input declaration](https://github.com/actions/upload-artifact/blob/v4.3.1/action.yml#L11-L19).\n\nIn case you're certain this if acceptable behavior,\ndisable this by explicitly setting `if-no-files-found: warn` or `if-no-files-found: ignore`.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "`actions/upload-artifact` should be configured to fail the CI when no files are found.\n\nWhen the action is not configured to fail on missing files,\nthe action step will be successful even when the artifact is not uploaded.\n\nThere are no branch protection rules to ensure that an artifact is produced,\nso the only way to ensure that the workflows are correct,\nis by failing the action step when the artifact input files are missing.\n\nSee the [`if-no-files-found` input declaration](https://github.com/actions/upload-artifact/blob/v4.3.1/action.yml#L11-L19).\n\nIn case you're certain this if acceptable behavior,\ndisable this by explicitly setting `if-no-files-found: warn` or `if-no-files-found: ignore`.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/upload-artifact@v4\n        with:\n          if-no-files-found: error\n          path: |\n            build/some/report/\n```\n`if-no-files-found` input is specified.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/upload-artifact@v4\n        with:\n          path: |\n            build/some/report/\n```\n`if-no-files-found` input is not declared, so it uses the default `warn` value.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/FailFastUploadArtifact/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/FailFastUploadArtifact/",
+              "id": "FailFastUploadArtifact",
+              "name": "`upload-artifact` should fail fast.",
+              "shortDescription": {
+                "text": "`upload-artifact` should fail fast."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "`EnricoMi/publish-unit-test-result-action` should be configured to fail the CI when no test results are found.\n\nWhen the action is not configured to fail on inconclusive results,\nthe action step will be successful even when the test results are missing.\n\nIt will emit a warning:\n> Warning: Could not find any JUnit XML files for .../TEST-*.xml\n\nwhich is easy to miss. This means that the CI could be broken by PRs,\neven if the job is required on a branch protection rule.\n\nSee the [`action_fail_on_inconclusive` input declaration](https://github.com/EnricoMi/publish-unit-test-result-action/blob/v2.14.0/action.yml#L40-L43).\n\nIn case you're certain this if acceptable behavior,\ndisable this by explicitly setting `action_fail_on_inconclusive: false`.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "`EnricoMi/publish-unit-test-result-action` should be configured to fail the CI when no test results are found.\n\nWhen the action is not configured to fail on inconclusive results,\nthe action step will be successful even when the test results are missing.\n\nIt will emit a warning:\n> Warning: Could not find any JUnit XML files for .../TEST-*.xml\n\nwhich is easy to miss. This means that the CI could be broken by PRs,\neven if the job is required on a branch protection rule.\n\nSee the [`action_fail_on_inconclusive` input declaration](https://github.com/EnricoMi/publish-unit-test-result-action/blob/v2.14.0/action.yml#L40-L43).\n\nIn case you're certain this if acceptable behavior,\ndisable this by explicitly setting `action_fail_on_inconclusive: false`.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: EnricoMi/publish-unit-test-result-action@v2\n        with:\n          action_fail_on_inconclusive: true\n          junit_files: |\n            **/build/**/TEST-*.xml\n```\n`action_fail_on_inconclusive` input is specified.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: EnricoMi/publish-unit-test-result-action@v2\n        with:\n          junit_files: |\n            **/build/**/TEST-*.xml\n```\n`action_fail_on_inconclusive` is not declared, so it uses the default `false` value.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/FailFastPublishUnitTestResults/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/FailFastPublishUnitTestResults/",
+              "id": "FailFastPublishUnitTestResults",
+              "name": "`publish-unit-test-result-action` should fail fast.",
+              "shortDescription": {
+                "text": "`publish-unit-test-result-action` should fail fast."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Action doesn't allow fast fail, and therefore black-listed.\n\nFrom its documentation:\n> If there are no changes (i.e. no diff exists with the checked-out base branch),\n> no pull request will be created and the action **exits silently**.\n> -- [README](https://github.com/peter-evans/create-pull-request#action-behaviour)\n\nThis is error-prone: if the PR content generation **accidentally** breaks, there's no way to detect it.\nPR creation step just passes as if everything is all right.\nThere are outputs from the action which could be checked for null/empty/undefined,\nbut any user of this action needs to be aware of this.\nThis is akin to [C's numeric return codes](https://www.tutorialspoint.com/cprogramming/c_error_handling.htm),\nthe world has moved away from that approach.\n\nThere's also confusion as seen [in the issue list](https://github.com/peter-evans/create-pull-request/issues?q=is%3Aissue+%22is+not+ahead+of+base%22+%22will+not+be+created%22).\n\nThe only way to notice this is by checking the logs of the action:\n```log\nBranch 'to-create' is not ahead of base 'main' and will not be created\n```\nand this line is not even a warning.\n\nWithout the ability to fail fast, this action is not fit for production usage.\n\nThe recommended replacement is [`gh pr create`](https://cli.github.com/manual/gh_pr_create),\nwhich is a first party GitHub CLI tool with behaviors fit for the GitHub Actions environment.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Action doesn't allow fast fail, and therefore black-listed.\n\nFrom its documentation:\n> If there are no changes (i.e. no diff exists with the checked-out base branch),\n> no pull request will be created and the action **exits silently**.\n> -- [README](https://github.com/peter-evans/create-pull-request#action-behaviour)\n\nThis is error-prone: if the PR content generation **accidentally** breaks, there's no way to detect it.\nPR creation step just passes as if everything is all right.\nThere are outputs from the action which could be checked for null/empty/undefined,\nbut any user of this action needs to be aware of this.\nThis is akin to [C's numeric return codes](https://www.tutorialspoint.com/cprogramming/c_error_handling.htm),\nthe world has moved away from that approach.\n\nThere's also confusion as seen [in the issue list](https://github.com/peter-evans/create-pull-request/issues?q=is%3Aissue+%22is+not+ahead+of+base%22+%22will+not+be+created%22).\n\nThe only way to notice this is by checking the logs of the action:\n```log\nBranch 'to-create' is not ahead of base 'main' and will not be created\n```\nand this line is not even a warning.\n\nWithout the ability to fail fast, this action is not fit for production usage.\n\nThe recommended replacement is [`gh pr create`](https://cli.github.com/manual/gh_pr_create),\nwhich is a first party GitHub CLI tool with behaviors fit for the GitHub Actions environment.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Create Pull Request\"\n        env:\n          TITLE: Example\n          BODY: |\n            Example PR description\n            - Updated foo\n            - Removed bar\n        run: >\n          gh pr create\n          --title \"${TITLE}\"\n          --body \"${BODY}\"\n          --draft\n          --label \"report\"\n          --label \"automated pr\"\n```\nUse the `gh` CLI to create a PR.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Create Pull Request\"\n        uses: peter-evans/create-pull-request@v6\n        with:\n          title: 'Example'\n          body: |\n            Example PR description\n            - Updated foo\n            - Removed bar\n          labels: |\n            report\n            automated pr\n          draft: true\n```\nUsing create-pull-request action.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/FailFastPeterEvansCreatePullRequest/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/FailFastPeterEvansCreatePullRequest/",
+              "id": "FailFastPeterEvansCreatePullRequest",
+              "name": "`peter-evans/create-pull-request` has unsafe edge cases, use `gh pr create` instead.",
+              "shortDescription": {
+                "text": "`peter-evans/create-pull-request` has unsafe edge cases, use `gh pr create` instead."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "`softprops/action-gh-release` should be configured to fail the CI when no files are found.\n\nWhen the action is not configured to fail on missing files,\nthe action step will be successful even when the artifact is not uploaded.\n\nThis means the produced releases might be missing important attached artifacts.\nThe release step should fail to alert the maintainer of the broken process.\n\nSee the [`fail_on_unmatched_files` input declaration](https://github.com/softprops/action-gh-release/blob/v2.0.4/action.yml#L27-L29).\n\nIn case you're certain this if acceptable behavior,\ndisable this by explicitly setting `fail_on_unmatched_files: false`.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "`softprops/action-gh-release` should be configured to fail the CI when no files are found.\n\nWhen the action is not configured to fail on missing files,\nthe action step will be successful even when the artifact is not uploaded.\n\nThis means the produced releases might be missing important attached artifacts.\nThe release step should fail to alert the maintainer of the broken process.\n\nSee the [`fail_on_unmatched_files` input declaration](https://github.com/softprops/action-gh-release/blob/v2.0.4/action.yml#L27-L29).\n\nIn case you're certain this if acceptable behavior,\ndisable this by explicitly setting `fail_on_unmatched_files: false`.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: softprops/action-gh-release@v2\n        with:\n          fail_on_unmatched_files: true\n          files: |\n            LICENCE\n            executable.exe\n            package*.zip\n```\n`fail_on_unmatched_files` input is specified.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: softprops/action-gh-release@v2\n        with:\n          files: |\n            LICENCE\n            executable.exe\n            package*.zip\n```\n`fail_on_unmatched_files` input is not declared, so it uses the default `false` value.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/FailFastSoftpropsGhRelease/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/FailFastSoftpropsGhRelease/",
+              "id": "FailFastSoftpropsGhRelease",
+              "name": "`action-gh-release` should fail fast.",
+              "shortDescription": {
+                "text": "`action-gh-release` should fail fast."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "> Workflows are defined by a YAML file checked in to your repository\n> -- [About workflows](https://docs.github.com/en/actions/using-workflows/about-workflows#about-workflows)\n\nThis means their names could be pretty much anything that's a valid file name.\nConventionally it's best to use lower-kebab-case naming for workflow file names.\n\nWorkflow IDs (or their file names) appear\n\n * in GitHub's Actions tab URLs, e.g.:\n   `https://github.com/TWiStErRob/net.twisterrob.ghlint/actions/workflows/ci-build.yml`\n * in commands / shell scripts when triggering \n   a [`workflow_dispatch` event](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch)\n   from [`gh` CLI](https://cli.github.com/manual/gh_workflow_run).",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "> Workflows are defined by a YAML file checked in to your repository\n> -- [About workflows](https://docs.github.com/en/actions/using-workflows/about-workflows#about-workflows)\n\nThis means their names could be pretty much anything that's a valid file name.\nConventionally it's best to use lower-kebab-case naming for workflow file names.\n\nWorkflow IDs (or their file names) appear\n\n * in GitHub's Actions tab URLs, e.g.:\n   `https://github.com/TWiStErRob/net.twisterrob.ghlint/actions/workflows/ci-build.yml`\n * in commands / shell scripts when triggering \n   a [`workflow_dispatch` event](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch)\n   from [`gh` CLI](https://cli.github.com/manual/gh_workflow_run).\n\n## Compliant example\n_`ci-build.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nWorkflow file has conventional lower-kebab-case name.\n\n## Non-compliant example\n_`CI build.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nWorkflow has non-lower-kebab-case IDs.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/WorkflowIdNaming/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/WorkflowIdNaming/",
+              "id": "WorkflowIdNaming",
+              "name": "Workflow should have a lower-case kebab ID.",
+              "shortDescription": {
+                "text": "Workflow should have a lower-case kebab ID."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "> The Job id must start with a letter or _ and contain only alphanumeric characters, -, or _.\n> -- [jobs.<job_id>](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_id)\n> -- [Setting an ID for a job](https://docs.github.com/en/actions/using-jobs/using-jobs-in-a-workflow#setting-an-id-for-a-job)\n\nJob IDs appear\n\n * as name of Jobs when their name is not set\n * in the [`needs` list](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds) of another job to express dependencies\n * in the [`outputs` declarations of `workflow_call`s](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_calloutputs)\n * in `if` conditions [e.g. `needs.other-job.outputs.some-output`](https://docs.github.com/en/actions/learn-github-actions/contexts#needs-context)\n\nThey're allowed to have `_` in the name,\nhowever, conventionally it's best to use lower-kebab-case naming for job names\nas it's consistent with the rest of GitHub's Workflow syntax, for example `runs-on`, `timeout-minutes`.\n\nUsing kebab case also helps to distinguish their IDs from\n\n * event names (lower_snake_case)\n * placeholders (`<job_id>`)\n * payload fields (`pull_request.auto_merge`)",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "> The Job id must start with a letter or _ and contain only alphanumeric characters, -, or _.\n> -- [jobs.<job_id>](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_id)\n> -- [Setting an ID for a job](https://docs.github.com/en/actions/using-jobs/using-jobs-in-a-workflow#setting-an-id-for-a-job)\n\nJob IDs appear\n\n * as name of Jobs when their name is not set\n * in the [`needs` list](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds) of another job to express dependencies\n * in the [`outputs` declarations of `workflow_call`s](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_calloutputs)\n * in `if` conditions [e.g. `needs.other-job.outputs.some-output`](https://docs.github.com/en/actions/learn-github-actions/contexts#needs-context)\n\nThey're allowed to have `_` in the name,\nhowever, conventionally it's best to use lower-kebab-case naming for job names\nas it's consistent with the rest of GitHub's Workflow syntax, for example `runs-on`, `timeout-minutes`.\n\nUsing kebab case also helps to distinguish their IDs from\n\n * event names (lower_snake_case)\n * placeholders (`<job_id>`)\n * payload fields (`pull_request.auto_merge`)\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    needs: [ something-else ]\n    steps:\n      - run: echo \"Example\"\n\n  something-else:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nJobs have conventional lower-kebab-case IDs.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  EXAMPLE:\n    runs-on: ubuntu-latest\n    needs: [ something_else ]\n    steps:\n      - run: echo \"Example\"\n\n  something_else:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nJobs have non-lower-kebab-case IDs, and their IDs are inconsistent with each other.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/JobIdNaming/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/JobIdNaming/",
+              "id": "JobIdNaming",
+              "name": "Job should have a lower-case kebab ID.",
+              "shortDescription": {
+                "text": "Job should have a lower-case kebab ID."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "> A unique identifier for the step.\n> -- [`steps[*].id` documentation](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsid)\n\nThe documentation doesn't define what's a valid ID, let alone a recommended one.\nConventionally it's best to use lower-kebab-case naming for step names.\nThis makes them consistent in style with the rest of the workflow syntax and workflow/job names.\n\nStep IDs appear\n\n * GitHub Expressions, as property dereferences of the\n   [`steps` context](https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context),  \n   e.g. `${{ steps.some-step }}`\n * in `if` conditions on other steps,  \n   e.g. `if: ${{ steps.some-step.outputs.some-output == 'something' }}`.\n * in `outputs` declarations of jobs,  \n   e.g. `some-output: ${{ steps.some-step.outputs.some-output }}`.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "> A unique identifier for the step.\n> -- [`steps[*].id` documentation](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsid)\n\nThe documentation doesn't define what's a valid ID, let alone a recommended one.\nConventionally it's best to use lower-kebab-case naming for step names.\nThis makes them consistent in style with the rest of the workflow syntax and workflow/job names.\n\nStep IDs appear\n\n * GitHub Expressions, as property dereferences of the\n   [`steps` context](https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context),  \n   e.g. `${{ steps.some-step }}`\n * in `if` conditions on other steps,  \n   e.g. `if: ${{ steps.some-step.outputs.some-output == 'something' }}`.\n * in `outputs` declarations of jobs,  \n   e.g. `some-output: ${{ steps.some-step.outputs.some-output }}`.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Example\"\n        run: echo \"Example\"\n```\nNot having an id is the best case, use name: to express what the step is to the reader.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - id: example step_NAME\n        run: echo \"Example\"\n```\nStep has non-lower-kebab-case ID.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/StepIdNaming/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/StepIdNaming/",
+              "id": "StepIdNaming",
+              "name": "Step should have a lower-case kebab ID.",
+              "shortDescription": {
+                "text": "Step should have a lower-case kebab ID."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "always() does not mean what you might think it means.\n\n```kotlin\nalways() == success() || failure() || cancelled()\n```\n\nMost of the time, we just want to use `if: success() || failure()`,\nfor example to upload test reports, when tests failed.\n\nImplying `cancelled()` via `always()` is risky when the step affects something external.\nIf someone manually cancels a workflow run, they explicitly expressed they don't want its effects to happen,\nbut `always()` will still execute the steps.\n\nReferences:\n\n * [Documentation](https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions)",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "always() does not mean what you might think it means.\n\n```kotlin\nalways() == success() || failure() || cancelled()\n```\n\nMost of the time, we just want to use `if: success() || failure()`,\nfor example to upload test reports, when tests failed.\n\nImplying `cancelled()` via `always()` is risky when the step affects something external.\nIf someone manually cancels a workflow run, they explicitly expressed they don't want its effects to happen,\nbut `always()` will still execute the steps.\n\nReferences:\n\n * [Documentation](https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions)\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Something that could fail.\"\n\n      - uses: actions/upload-artifact@v0\n        if: ${{ success() || failure() }}\n```\nStep is explicitly defining to run on failure in addition to the default `success()`.\n\n### Compliant example #2\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Something that could fail.\"\n\n      - uses: actions/upload-artifact@v0\n        if: ${{ success() || failure() || cancelled() }}\n```\nStep is well-specified when to execute with `if:`.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Something that could fail.\"\n\n      - uses: actions/upload-artifact@v0\n        if: ${{ always() }}\n```\n`always()` used in an `if:` condition.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/NeverUseAlways/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/NeverUseAlways/",
+              "id": "NeverUseAlways",
+              "name": "Using `always()` is discouraged.",
+              "shortDescription": {
+                "text": "Using `always()` is discouraged."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Using a negated status check function is confusing.\nBeing explicit helps in understanding the intent of the condition.\n\nIf someone has read the documentation, they might understand what `!failure()` actually means,\nbut being explicit comes at almost no cost and helps everyone immediately understand the intent:\n```yaml\nif: ${{ success() || cancelled() }}\n```\n\n_Aside: In the unlikely event that GitHub introduces a new status check function,\nhalf of the negative usages will get invalid.\nYou never know if your condition will be in the right half._\n\nReferences:\n\n * [Documentation](https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions)\n\n---\n\nNote the documentation recommends:\n> If you want to run a job or step regardless of its success or failure,\n> use the recommended alternative: `if: ${{ !cancelled() }}`\n> -- [Documentation](https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions)\n\nbut I strongly believe if you want to \"run a job or step regardless of its success or failure\",\nuse `if: ${{ success() || failure() }}`, it's much clearer, isn't it?",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Using a negated status check function is confusing.\nBeing explicit helps in understanding the intent of the condition.\n\nIf someone has read the documentation, they might understand what `!failure()` actually means,\nbut being explicit comes at almost no cost and helps everyone immediately understand the intent:\n```yaml\nif: ${{ success() || cancelled() }}\n```\n\n_Aside: In the unlikely event that GitHub introduces a new status check function,\nhalf of the negative usages will get invalid.\nYou never know if your condition will be in the right half._\n\nReferences:\n\n * [Documentation](https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions)\n\n---\n\nNote the documentation recommends:\n> If you want to run a job or step regardless of its success or failure,\n> use the recommended alternative: `if: ${{ !cancelled() }}`\n> -- [Documentation](https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions)\n\nbut I strongly believe if you want to \"run a job or step regardless of its success or failure\",\nuse `if: ${{ success() || failure() }}`, it's much clearer, isn't it?\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Something that could fail.\"\n\n      - uses: actions/upload-artifact@v0\n        if: ${{ success() || failure() }}\n```\n`if:` condition is explicitly stating the statuses to run on.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Something that could fail.\"\n\n      - uses: actions/upload-artifact@v0\n        if: ${{ !cancelled() }}\n```\n`if:` condition uses `!` to negate a status check function.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/NegativeStatusCheck/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/NegativeStatusCheck/",
+              "id": "NegativeStatusCheck",
+              "name": "Use positive conditions.",
+              "shortDescription": {
+                "text": "Use positive conditions."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Referencing a job that does not exist is an error.\nNot all dependencies can be satisfied and therefore the workflow cannot be started.\nMake sure all the jobs referenced in `needs:` exist in the workflow.\n\nGitHub may give an error similar to this:\n> The workflow is not valid. `.github/workflows/???.yml` (Line: ?, Col: ?):\n> Job '???' depends on unknown job '???'.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Referencing a job that does not exist is an error.\nNot all dependencies can be satisfied and therefore the workflow cannot be started.\nMake sure all the jobs referenced in `needs:` exist in the workflow.\n\nGitHub may give an error similar to this:\n> The workflow is not valid. `.github/workflows/???.yml` (Line: ?, Col: ?):\n> Job '???' depends on unknown job '???'.\n\n## Compliant example\n_`example.yml`_\n```yaml\nname: \"My Workflow\"\non: push\njobs:\n  example1:\n    name: \"My Job\"\n    uses: reusable/workflow.yml\n  example2:\n    name: \"My Job\"\n    needs: example1\n    uses: reusable/workflow.yml\n```\n`example2` refers to `example1` as a dependency.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\nname: \"My Workflow\"\non: push\njobs:\n  example1:\n    name: \"My Job\"\n    uses: reusable/workflow.yml\n  example2:\n    name: \"My Job\"\n    needs: example3\n    uses: reusable/workflow.yml\n```\n`example2` refers to a non-existent `example3` as a dependency.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/MissingNeedsJob/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/MissingNeedsJob/",
+              "id": "MissingNeedsJob",
+              "name": "Needs references a missing job.",
+              "shortDescription": {
+                "text": "Needs references a missing job."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Having a cycle in the job dependency graph is an error.\nThere must be a starting point in the workflow to start the workflow run.\n\nGitHub may give an error similar to this:\n> The workflow is not valid. `.github/workflows/???.yml` (Line: ?, Col: ?):\n> The workflow must contain at least one job with no dependencies.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Having a cycle in the job dependency graph is an error.\nThere must be a starting point in the workflow to start the workflow run.\n\nGitHub may give an error similar to this:\n> The workflow is not valid. `.github/workflows/???.yml` (Line: ?, Col: ?):\n> The workflow must contain at least one job with no dependencies.\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\nname: \"My Workflow\"\non: push\njobs:\n  example:\n    name: \"My Job\"\n    uses: reusable/workflow.yml\n```\nJobs don't have dependencies.\n\n### Compliant example #2\n_`example.yml`_\n```yaml\nname: \"My Workflow\"\non: push\njobs:\n  example1:\n    name: \"My Job\"\n    uses: reusable/workflow.yml\n  example2:\n    name: \"My Job\"\n    needs: example1\n    uses: reusable/workflow.yml\n```\nThere's a job to start with (`example1`).\n\n## Non-compliant example\n_`example.yml`_\n```yaml\nname: \"My Workflow\"\non: push\njobs:\n  example1:\n    name: \"My Job 1 -> 2\"\n    needs: example2\n    uses: reusable/workflow.yml\n  example2:\n    name: \"My Job 2 -> 1\"\n    needs: example1\n    uses: reusable/workflow.yml\n```\nCircular dependency between jobs.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/JobDependencyCycle/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/JobDependencyCycle/",
+              "id": "JobDependencyCycle",
+              "name": "Cycle in job dependencies (needs).",
+              "shortDescription": {
+                "text": "Cycle in job dependencies (needs)."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Using the `gh` CLI tool requires a GitHub token to be set.\n\n> GitHub CLI is preinstalled on all GitHub-hosted runners.\n> For each step that uses GitHub CLI,\n> you must set an environment variable called GH_TOKEN to a token with the required scopes.\n> -- [Using GitHub CLI in workflows](https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows)\n\nUsually this token will be:\n```yaml\nenv:\n  GH_TOKEN: ${{ github.token }}\n```\nand the \"required scopes\" can be defined in the `permissions:` field of the job.\n\nReferences:\n\n * [GitHub CLI Manual](https://cli.github.com/manual/#configuration)\n * [Using GitHub CLI in workflows](https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows)\n * [gh help environment](https://cli.github.com/manual/gh_help_environment)\n---\n\nNote: it's possible to set both `GH_TOKEN` and `GITHUB_TOKEN` as environment variables,\nbut to reduce confusion between\n\n * `GITHUB_TOKEN` environment variables used by `gh` CLI\n * `GITHUB_TOKEN` secret automatically defined by GitHub Actions\n\nit's recommended to always use `GH_TOKEN` and `${{ github.token }}`, see [`PreferGitHubToken`](PreferGitHubToken.md).",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Using the `gh` CLI tool requires a GitHub token to be set.\n\n> GitHub CLI is preinstalled on all GitHub-hosted runners.\n> For each step that uses GitHub CLI,\n> you must set an environment variable called GH_TOKEN to a token with the required scopes.\n> -- [Using GitHub CLI in workflows](https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows)\n\nUsually this token will be:\n```yaml\nenv:\n  GH_TOKEN: ${{ github.token }}\n```\nand the \"required scopes\" can be defined in the `permissions:` field of the job.\n\nReferences:\n\n * [GitHub CLI Manual](https://cli.github.com/manual/#configuration)\n * [Using GitHub CLI in workflows](https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows)\n * [gh help environment](https://cli.github.com/manual/gh_help_environment)\n---\n\nNote: it's possible to set both `GH_TOKEN` and `GITHUB_TOKEN` as environment variables,\nbut to reduce confusion between\n\n * `GITHUB_TOKEN` environment variables used by `gh` CLI\n * `GITHUB_TOKEN` secret automatically defined by GitHub Actions\n\nit's recommended to always use `GH_TOKEN` and `${{ github.token }}`, see [`PreferGitHubToken`](PreferGitHubToken.md).\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: gh pr view\n        env:\n          GH_TOKEN: ${{ github.token }}\n```\n`GH_TOKEN` is defined.\n\n### Compliant example #2\n_`action.yml`_\n```yaml\nname: Test\ndescription: Test\ninputs:\n  token:\n    description: 'GitHub token to authenticate to GitHub APIs.'\n    default: ${{ github.token }}\nruns:\n  using: composite\n  steps:\n    - uses: actions/checkout@v4\n    - run: gh pr view\n      shell: bash\n      env:\n        GH_TOKEN: ${{ inputs.token }}\n```\n`GH_TOKEN` is defined.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: gh pr view\n```\n`GH_TOKEN` is not defined, command will fail with:\n```log\ngh: To use GitHub CLI in a GitHub Actions workflow, set the GH_TOKEN environment variable. Example:\n  env:\n    GH_TOKEN: ${{ github.token }}\nError: Process completed with exit code 4.\n```\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/MissingGhToken/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/MissingGhToken/",
+              "id": "MissingGhToken",
+              "name": "`GH_TOKEN` is required for using the `gh` CLI tool.",
+              "shortDescription": {
+                "text": "`GH_TOKEN` is required for using the `gh` CLI tool."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Timeouts are important to prevent stuck jobs from blocking the workflow.\n\nThe [default value](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idtimeout-minutes)\nis 360 minutes, which means 6 hours.\nThis is usually too long for most jobs, and should be set explicitly to a lower value.\n\nFun fact: 360 minutes is actually a hard limit on the job length, and not a friendly default.\n\nThis should save resources:\n\n * You'll get an error faster in case something is stuck.\n * You'll get less [billed minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions#minute-multipliers) because of used minutes.\n   Especially important on macOS (10x) runners.\n * Other jobs will be able to run due to [concurrency limits](https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits).\n * You'll contribute to a greener planet due to less data-center usage.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Timeouts are important to prevent stuck jobs from blocking the workflow.\n\nThe [default value](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idtimeout-minutes)\nis 360 minutes, which means 6 hours.\nThis is usually too long for most jobs, and should be set explicitly to a lower value.\n\nFun fact: 360 minutes is actually a hard limit on the job length, and not a friendly default.\n\nThis should save resources:\n\n * You'll get an error faster in case something is stuck.\n * You'll get less [billed minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions#minute-multipliers) because of used minutes.\n   Especially important on macOS (10x) runners.\n * Other jobs will be able to run due to [concurrency limits](https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits).\n * You'll contribute to a greener planet due to less data-center usage.\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    timeout-minutes: 1\n    steps:\n      - run: while true; do echo \"Infinite\"; done\n```\nTimeout is declared, job will be cancelled early.\n\n### Compliant example #2\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    timeout-minutes: 35\n    steps:\n      - uses: actions/checkout@v4\n\n      - run: ./scripts/integration-tests.sh\n        timeout-minutes: 30\n\n      - uses: actions/upload-artifact@v4\n        if: success() || failure()\n        with:\n          path: modules/**/test-reports\n```\nAn additional recommendation for better developer experience:\nSet a timeout on the longest-running steps inside a job.\n\nWhen running integration tests which are known to complete in 30 minutes,\nbut are sometimes hanging or get stuck, it's useful to set the job timeout to 35 minutes,\nand the step timeout to 30 minutes.\nThis will ensure that there's enough time for setup and teardown,\nincluding uploading artifact reports for a partial test execution after a cancelled test run.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: while true; do echo \"Infinite\"; done\n```\nTimeout is missing, this job will run for 6 hours.\n\nWill probably crash before that while running out of disk space because of incessant logging.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/MissingJobTimeout/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/MissingJobTimeout/",
+              "id": "MissingJobTimeout",
+              "name": "Job is missing a timeout.",
+              "shortDescription": {
+                "text": "Job is missing a timeout."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Having a workflow name is important for usability.\nThe default workflow name is the file name, but it's recommended to override it for human consumption:\n\n * The workflow name is visible at various parts of the GitHub UI, most notably in the Actions tab.\n * It's also used in Email subjects, for example:\n   `[<org>/<repo>] Run failed: <workflow name> - <branch name> (<hash>)`.\n * It's also useful when opening the file for viewing or editing,\n   to give some context of what's expected to happen in the workflow.\n\nNote: the `name: ...` might be present in YAML, but if it's empty or blank, it's considered missing.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Having a workflow name is important for usability.\nThe default workflow name is the file name, but it's recommended to override it for human consumption:\n\n * The workflow name is visible at various parts of the GitHub UI, most notably in the Actions tab.\n * It's also used in Email subjects, for example:\n   `[<org>/<repo>] Run failed: <workflow name> - <branch name> (<hash>)`.\n * It's also useful when opening the file for viewing or editing,\n   to give some context of what's expected to happen in the workflow.\n\nNote: the `name: ...` might be present in YAML, but if it's empty or blank, it's considered missing.\n\n## Compliant example\n_`example.yml`_\n```yaml\nname: \"My Workflow\"\non: push\njobs:\n  example:\n    name: \"My Job\"\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Example\"\n        run: echo \"Example\"\n```\nThe workflow has a name.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    name: \"My Job\"\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Example\"\n        run: echo \"Example\"\n```\nThe workflow is missing a name.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/MissingWorkflowName/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/MissingWorkflowName/",
+              "id": "MissingWorkflowName",
+              "name": "Workflow is missing a name.",
+              "shortDescription": {
+                "text": "Workflow is missing a name."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Having a job name is important for usability.\n\nThe default job name is the id of the job, but it's recommended to override it for human consumption:\n\n * The job name is visible at various parts of the GitHub UI,\n   most notably in the Checks UI on commits, bottom of pull requests and merge queues.\n * It's also prominently visible when looking into a workflow run:\n   in the Summary dependency graph, in the Jobs tree on the left and as a title for logs.\n * It's also used in Email contents, listing each job as failed or succeeded.\n * It's also useful when opening the file for viewing or editing,\n   to give some context of what's expected to happen in the job.\n\nNote: the `name: ...` might be present in YAML, but if it's empty or blank, it's considered missing.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Having a job name is important for usability.\n\nThe default job name is the id of the job, but it's recommended to override it for human consumption:\n\n * The job name is visible at various parts of the GitHub UI,\n   most notably in the Checks UI on commits, bottom of pull requests and merge queues.\n * It's also prominently visible when looking into a workflow run:\n   in the Summary dependency graph, in the Jobs tree on the left and as a title for logs.\n * It's also used in Email contents, listing each job as failed or succeeded.\n * It's also useful when opening the file for viewing or editing,\n   to give some context of what's expected to happen in the job.\n\nNote: the `name: ...` might be present in YAML, but if it's empty or blank, it's considered missing.\n\n## Compliant example\n_`example.yml`_\n```yaml\nname: \"Example\"\non: push\njobs:\n  example:\n    name: \"My Job\"\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Example\"\n        run: echo \"Example\"\n```\nThe example job has a name.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\nname: \"Example\"\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Example\"\n        run: echo \"Example\"\n```\nThe example job is missing a name.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/MissingJobName/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/MissingJobName/",
+              "id": "MissingJobName",
+              "name": "Job is missing a name.",
+              "shortDescription": {
+                "text": "Job is missing a name."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Having a step name is important for usability.\n\nThe default step name is the first line of `run:` or the action of `uses:`,\nbut it's recommended to override it for human consumption:\n\n * The step name is the header shown when a step is collapsed on the workflow run UI.\n * Using a succinct, but descriptive name can help to understand the workflow run at a glance.\n * It's also useful when opening the file for viewing or editing,\n   it gives the file very nice structure if each step starts with a name.\n\nNote: the `name: ...` might be present in YAML, but if it's empty or blank, it's considered missing.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Having a step name is important for usability.\n\nThe default step name is the first line of `run:` or the action of `uses:`,\nbut it's recommended to override it for human consumption:\n\n * The step name is the header shown when a step is collapsed on the workflow run UI.\n * Using a succinct, but descriptive name can help to understand the workflow run at a glance.\n * It's also useful when opening the file for viewing or editing,\n   it gives the file very nice structure if each step starts with a name.\n\nNote: the `name: ...` might be present in YAML, but if it's empty or blank, it's considered missing.\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\nname: \"Example\"\non: push\njobs:\n  example:\n    name: \"Example\"\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"My Step\"\n        run: echo \"Example\"\n```\nThe first job step has a name.\n\n### Compliant example #2\n_`action.yml`_\n```yaml\nname: \"Test\"\ndescription: Test\nruns:\n  using: composite\n  steps:\n    - name: \"My Step\"\n      run: echo \"Example\"\n      shell: bash\n```\nThe first action step has a name.\n\n## Non-compliant examples\n\n### Non-compliant example #1\n_`example.yml`_\n```yaml\nname: \"Example\"\non: push\njobs:\n  example:\n    name: \"Example\"\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nThe first job step is missing a name.\n\n### Non-compliant example #2\n_`action.yml`_\n```yaml\nname: \"Test\"\ndescription: Test\nruns:\n  using: composite\n  steps:\n    - run: echo \"Example\"\n      shell: bash\n```\nThe first action step is missing a name.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/MissingStepName/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/MissingStepName/",
+              "id": "MissingStepName",
+              "name": "Step is missing a name.",
+              "shortDescription": {
+                "text": "Step is missing a name."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Specifying a shell explicitly has benefits,\nsee the [`shell:` documentation](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell) for what changes.\n\nThe `shell:` can be specified on 3 levels, and the lowest wins:\n\n * [`defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaultsrun)\n * [`jobs.<job_id>.defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_iddefaultsrun)\n * [`jobs.<job_id>.steps[*].shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell)\n\nFor Linux / MacOS runners it's recommended to specify `bash` explicitly, because it adds additional arguments:\n\n * `-e`: to stop on first error (used for both)\n * `-o pipefail`: propagate exit code from error inside a pipe\n * `--noprofile`/`--norc` start with a clean environment.\n\nFor a deeper explanation of `-e`/`-o` read [this gist](https://gist.github.com/mohanpedala/1e2ff5661761d3abd0385e8223e16425).\nThis gives us faster failures and more useful error messages.\n\nIt's worth noting that simple shell commands might not warrant an explicit shell, but it's worth adding them anyway:\n\n * for consistency with other steps and workflows.\n * for maintainability, in case the command becomes more complex, protection is already in place.\n * for copy-paste-ability, when the command or its modified version is \"reused\" in other workflows.\n * for readability, to help the reader understand the environment the script is running in.\n\nKnown shortcut: `shell: bash` is also recommended for Windows, but it's supported by GitHub Actions.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Specifying a shell explicitly has benefits,\nsee the [`shell:` documentation](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell) for what changes.\n\nThe `shell:` can be specified on 3 levels, and the lowest wins:\n\n * [`defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaultsrun)\n * [`jobs.<job_id>.defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_iddefaultsrun)\n * [`jobs.<job_id>.steps[*].shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell)\n\nFor Linux / MacOS runners it's recommended to specify `bash` explicitly, because it adds additional arguments:\n\n * `-e`: to stop on first error (used for both)\n * `-o pipefail`: propagate exit code from error inside a pipe\n * `--noprofile`/`--norc` start with a clean environment.\n\nFor a deeper explanation of `-e`/`-o` read [this gist](https://gist.github.com/mohanpedala/1e2ff5661761d3abd0385e8223e16425).\nThis gives us faster failures and more useful error messages.\n\nIt's worth noting that simple shell commands might not warrant an explicit shell, but it's worth adding them anyway:\n\n * for consistency with other steps and workflows.\n * for maintainability, in case the command becomes more complex, protection is already in place.\n * for copy-paste-ability, when the command or its modified version is \"reused\" in other workflows.\n * for readability, to help the reader understand the environment the script is running in.\n\nKnown shortcut: `shell: bash` is also recommended for Windows, but it's supported by GitHub Actions.\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\" | grep \"Missing\" | sort\n        shell: bash\n```\nSpecified shell makes grep fail.\n\n### Compliant example #2\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    defaults:\n      run:\n        shell: bash\n    steps:\n      - run: echo \"Example\" | grep \"Missing\" | sort\n```\nGlobally specified shell is inherited to the step.\n\n## Non-compliant examples\n\n### Non-compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\" | grep \"Missing\" | sort\n```\nMissing shell masks pipe failures.\n\n### Non-compliant example #2\n_`example.yml`_\n```yaml\nname: Test\ndescription: Test\nruns:\n  using: composite\n  steps:\n    - run: echo \"Example\" | grep \"Missing\" | sort\n```\nShell is mandatory for composite action steps.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/MissingShell/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/MissingShell/",
+              "id": "MissingShell",
+              "name": "Run step is missing a shell.",
+              "shortDescription": {
+                "text": "Run step is missing a shell."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Mixing built-in `GITHUB_TOKEN` with repository/org-level secrets is confusing.\n\nWhenever the [`secrets` context](https://docs.github.com/en/actions/learn-github-actions/contexts#secrets-context)\nis used, the reference is expected to be defined in _Settings > Security > Secrets and variables > Actions_;\n*except*, when it's about `GITHUB_TOKEN`.\n\n`GITHUB_TOKEN` is very special in several aspects, a few more examples:\n\n * [It's passed to forked workflow runs.](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#using-secrets-in-a-workflow)\n * [It's accessible in actions, even when not passed in.](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow)\n * [Actions don't have access to the `secrets` context](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#accessing-your-secrets),\n   but [they can access `github.token`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#:~:text=An%20action%20can%20access,action.). \n\nTo clarify this special case to the reader,\nit's recommended to use `github.token` instead of `secrets.GITHUB_TOKEN` everywhere.\n\nThis will make the usages of `github.token` consistent across workflows and actions,\nresulting in better maintainability due to easier copy-paste-ability between them.\n\nIn case of `gh` CLI, this preference will also help disambiguate between\n\n * `GH_TOKEN` environment variable and `GITHUB_TOKEN` secret.\n * `GITHUB_TOKEN` environment variable and `GITHUB_TOKEN` secret.\n\nSee [gh environment](https://cli.github.com/manual/gh_help_environment) for more details.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Mixing built-in `GITHUB_TOKEN` with repository/org-level secrets is confusing.\n\nWhenever the [`secrets` context](https://docs.github.com/en/actions/learn-github-actions/contexts#secrets-context)\nis used, the reference is expected to be defined in _Settings > Security > Secrets and variables > Actions_;\n*except*, when it's about `GITHUB_TOKEN`.\n\n`GITHUB_TOKEN` is very special in several aspects, a few more examples:\n\n * [It's passed to forked workflow runs.](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#using-secrets-in-a-workflow)\n * [It's accessible in actions, even when not passed in.](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow)\n * [Actions don't have access to the `secrets` context](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#accessing-your-secrets),\n   but [they can access `github.token`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#:~:text=An%20action%20can%20access,action.). \n\nTo clarify this special case to the reader,\nit's recommended to use `github.token` instead of `secrets.GITHUB_TOKEN` everywhere.\n\nThis will make the usages of `github.token` consistent across workflows and actions,\nresulting in better maintainability due to easier copy-paste-ability between them.\n\nIn case of `gh` CLI, this preference will also help disambiguate between\n\n * `GH_TOKEN` environment variable and `GITHUB_TOKEN` secret.\n * `GITHUB_TOKEN` environment variable and `GITHUB_TOKEN` secret.\n\nSee [gh environment](https://cli.github.com/manual/gh_help_environment) for more details.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: gh pr view\n        env:\n          GH_TOKEN: ${{ github.token }}\n```\n`github.token` is used.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: gh pr view\n        env:\n          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n```\n`secrets.GITHUB_TOKEN` is used.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/PreferGitHubToken/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/PreferGitHubToken/",
+              "id": "PreferGitHubToken",
+              "name": "Prefer `github.token` instead of `secrets.GITHUB_TOKEN`.",
+              "shortDescription": {
+                "text": "Prefer `github.token` instead of `secrets.GITHUB_TOKEN`."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Duplication can lead to confusion.\n\nThe default `shell:` can be specified on 2 levels, and the lowest wins:\n\n * [`defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaultsrun)\n * [`jobs.<job_id>.defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_iddefaultsrun)\n\nThis means that when the workflow has the shell defined, the job's definition is not necessary.\n\nIt is, however, recommended that the shell is defined on a per-job basis,\nbecause each job can have different runners.\n\nThis results in\n\n * explicit definitions:\n   each job has their shells defined.\n * better locality:\n   each job has their shell defined closer to usage.\n * clear separation:\n   `runs-on` an `defaults.run.shell` are on the same level.\n * better copy-paste-ability:\n   when a job is copied or moved, it can't break because of changed or missing shell.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Duplication can lead to confusion.\n\nThe default `shell:` can be specified on 2 levels, and the lowest wins:\n\n * [`defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaultsrun)\n * [`jobs.<job_id>.defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_iddefaultsrun)\n\nThis means that when the workflow has the shell defined, the job's definition is not necessary.\n\nIt is, however, recommended that the shell is defined on a per-job basis,\nbecause each job can have different runners.\n\nThis results in\n\n * explicit definitions:\n   each job has their shells defined.\n * better locality:\n   each job has their shell defined closer to usage.\n * clear separation:\n   `runs-on` an `defaults.run.shell` are on the same level.\n * better copy-paste-ability:\n   when a job is copied or moved, it can't break because of changed or missing shell.\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\non: push\ndefaults:\n  run:\n    shell: bash\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n```\nDefault shell is defined on workflow.\n\n### Compliant example #2\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    defaults:\n      run:\n        shell: bash\n    steps:\n      - run: echo \"Example\"\n```\nDefault shell is defined on job.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\ndefaults:\n  run:\n    shell: bash\njobs:\n  example:\n    runs-on: ubuntu-latest\n    defaults:\n      run:\n        shell: bash\n    steps:\n      - run: echo \"Example\"\n```\nSame default shell is defined on both workflow and job.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/RedundantDefaultShell/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/RedundantDefaultShell/",
+              "id": "RedundantDefaultShell",
+              "name": "Same default shell is defined both on job and workflow.",
+              "shortDescription": {
+                "text": "Same default shell is defined both on job and workflow."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Duplication can lead to confusion.\n\nThe `shell:` can be specified on 3 levels, and the lowest wins:\n\n * [`defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaultsrun)\n * [`jobs.<job_id>.defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_iddefaultsrun)\n * [`jobs.<job_id>.steps[*].shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell)\n\nThis means that when the workflow or job has the shell defined, the steps' definitions are not necessary.",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Duplication can lead to confusion.\n\nThe `shell:` can be specified on 3 levels, and the lowest wins:\n\n * [`defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaultsrun)\n * [`jobs.<job_id>.defaults.run.shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_iddefaultsrun)\n * [`jobs.<job_id>.steps[*].shell`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell)\n\nThis means that when the workflow or job has the shell defined, the steps' definitions are not necessary.\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    defaults:\n      run:\n        shell: bash\n    steps:\n      - run: echo \"Example\"\n```\nDefault shell is defined on job.\n\n## Non-compliant examples\n\n### Non-compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    defaults:\n      run:\n        shell: bash\n    steps:\n      - run: echo \"Example\"\n        shell: bash\n```\nDefault shell is defined on job, but steps also repeat it.\n\n### Non-compliant example #2\n_`example.yml`_\n```yaml\non: push\ndefaults:\n  run:\n    shell: bash\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Example\"\n        shell: bash\n```\nDefault shell is defined on workflow, but steps also repeat it.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/RedundantShell/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/RedundantShell/",
+              "id": "RedundantShell",
+              "name": "Same shell is defined both on step and globally.",
+              "shortDescription": {
+                "text": "Same shell is defined both on step and globally."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Environment files can be written in many different ways from shell scripts.\n\nTo be consistent with ShellCheck recommendations\n([SC2086](https://www.shellcheck.net/wiki/SC2086) and [SC2250](https://www.shellcheck.net/wiki/SC2250)),\nit is recommended to quote and use curly braces around environment file path variables, for example:\n```shell\n>> \"${GITHUB_OUTPUT}\"\n```\n\nWhile other styles also work, this style is the most robust and safe.\nIf this style is copied elsewhere it can only benefit the target script.\nIn short, the benefits are:\n\n * Quotes around file paths help with spaces and special characters.\n * Curly braces help with explicit variable references and disambiguation.\n\nReferences:\n\n * [Environment files documentation](https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#environment-files)\n * [Prefer putting braces around variable references even when not strictly required.](https://www.shellcheck.net/wiki/SC2250)\n * [Double quote to prevent globbing and word splitting.](https://www.shellcheck.net/wiki/SC2086)",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Environment files can be written in many different ways from shell scripts.\n\nTo be consistent with ShellCheck recommendations\n([SC2086](https://www.shellcheck.net/wiki/SC2086) and [SC2250](https://www.shellcheck.net/wiki/SC2250)),\nit is recommended to quote and use curly braces around environment file path variables, for example:\n```shell\n>> \"${GITHUB_OUTPUT}\"\n```\n\nWhile other styles also work, this style is the most robust and safe.\nIf this style is copied elsewhere it can only benefit the target script.\nIn short, the benefits are:\n\n * Quotes around file paths help with spaces and special characters.\n * Curly braces help with explicit variable references and disambiguation.\n\nReferences:\n\n * [Environment files documentation](https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#environment-files)\n * [Prefer putting braces around variable references even when not strictly required.](https://www.shellcheck.net/wiki/SC2250)\n * [Double quote to prevent globbing and word splitting.](https://www.shellcheck.net/wiki/SC2086)\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"result=Example\" >> \"${GITHUB_OUTPUT}\"\n```\nFully quoted and safe access to `GITHUB_OUTPUT` environment variable.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"result=Example\" >> $GITHUB_OUTPUT\n```\nMissing quotes and curly braces around `GITHUB_OUTPUT`.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/SafeEnvironmentFileRedirect/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/SafeEnvironmentFileRedirect/",
+              "id": "SafeEnvironmentFileRedirect",
+              "name": "`GITHUB_OUTPUT` must be quoted.",
+              "shortDescription": {
+                "text": "`GITHUB_OUTPUT` must be quoted."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Using `${{ }}` in shell scripts is vulnerable to script injection.\nScript injection is when a user can control part of the script, and can inject arbitrary code.\nIn most cases this is a security vulnerability, but at the very least it's a bug.\nAll user input must be sanitized before being executed as shell script.\n\nThe simplest way to achieve this is using environment variables to pass data as inputs to `run:` scripts.\nShells know how to handle them: `${XXX}`.\nWith environment variables data travels in memory, rather than becoming part of the executable code.\n\nReferences:\n\n * [Understanding the risk of script injections](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#understanding-the-risk-of-script-injections)\n * [Stealing the job's `GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#stealing-the-jobs-github_token)",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Using `${{ }}` in shell scripts is vulnerable to script injection.\nScript injection is when a user can control part of the script, and can inject arbitrary code.\nIn most cases this is a security vulnerability, but at the very least it's a bug.\nAll user input must be sanitized before being executed as shell script.\n\nThe simplest way to achieve this is using environment variables to pass data as inputs to `run:` scripts.\nShells know how to handle them: `${XXX}`.\nWith environment variables data travels in memory, rather than becoming part of the executable code.\n\nReferences:\n\n * [Understanding the risk of script injections](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#understanding-the-risk-of-script-injections)\n * [Stealing the job's `GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#stealing-the-jobs-github_token)\n\n## Compliant examples\n\n### Compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Produce some output\"\n        id: producer\n        run: |\n          echo 'result=Warning: Quotation mark (\") needs a pair.' >> \"${GITHUB_OUTPUT}\"\n\n      - name: \"Consume some output\"\n        env:\n          RESULT: ${{ steps.producer.outputs.result }}\n        run: echo \"${RESULT}\"\n```\nCapturing the input in an environment variable prevents shell injection.\n\nThe output is as expected:\n```log\nWarning: Quotation mark (\") needs a pair.\n```\n\n### Compliant example #2\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - run: cp -r \"${GITHUB_WORKSPACE}\" \"${RUNNER_TEMP}\"\n```\nA note on GitHub variables vs contexts.\nThere are a few examples where using `${{ github.* }}` would result in an unsafe script,\nfor example:\n```yaml\n- run: cp \"${{ github.workspace }}\" \"${{ runner.temp }}\"\n```\n\nInstead of introducing an `env:` section like this:\n```yaml\n- env:\n    WS: ${{ github.workspace }}\n    RT: ${{ runner.temp }}\n  run: cp -r \"${WS}\" \"${RT}\"\n```\nconsider using the `${GITHUB_*}` and `${RUNNER_*}` environment variables as shown in the example.\n\nCompare:\n\n * [`GITHUB_*` and `RUNNER_*` environment variables](https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables)\n * [`github.*` context](https://docs.github.com/en/actions/learn-github-actions/contexts#github-context)\n * [`runner.*` context](https://docs.github.com/en/actions/learn-github-actions/contexts#runner-context)\n\n---\n\nAn exception to this might be when there's a project-specific path that is appended and used multiple times:\n```yaml\n- env:\n    WS: ${{ github.workspace }}/some/thing\n    RT: ${{ runner.temp }}/other/place\n  run: |\n    unzip \"${WS}/foo.zip\" -d \"${RT}\"\n    rm -rf \"${WS}\"\n    mv \"${RT}\" \"${WS}\"\n```\n\n## Non-compliant examples\n\n### Non-compliant example #1\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Produce some output\"\n        id: producer\n        run: |\n          echo 'result=Warning: Quotation mark (\") needs a pair.' >> \"${GITHUB_OUTPUT}\"\n\n      - name: \"Consume some output directly\"\n        run: echo \"${{ steps.producer.outputs.result }}\"\n```\nDirectly using the output in the shell script is vulnerable to script injection.\nDepending on the actual contents of the result\n\n * in the best case, the script fails,\n * in normal cases, the output is just wrong,\n * in the worst case, this could lead to arbitrary code execution.\n\nIn this example, the output is:\n```log\n/home/runner/work/_temp/d3ddaaab-5e34-4eb3-be73-4e830012fe4e.sh: line 1: syntax error near unexpected token `)'\nError: Process completed with exit code 2.\n```\nbecause after resolving the `${{ ... }}` expression, the script becomes:\n```shell\necho \"Warning: Quotation mark (\") needs a pair.\"\n```\nwhere\n```shell\necho \"Warning: Quotation mark (\"\n```\nis correct, but the remaining code after is meaningless for shells: `) needs a pair.\"`.\n\n### Non-compliant example #2\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Produce some output\"\n        id: producer\n        run: |\n          echo 'result={\"add\":\"one\",\"remove\":[\"two\",\"three\"]}' >> \"${GITHUB_OUTPUT}\"\n\n      - name: \"Consume some output directly\"\n        run: echo \"${{ steps.producer.outputs.result }}\"\n```\nDirectly using the output in the shell script is vulnerable to script injection.\n\nIn this example, the output is:\n```log\n{add:one,remove:[two,three]}\n```\ninstead of\n```log\n{\"add\":\"one\",\"remove\":[\"two\",\"three\"]}\n```\nbecause after resolving the `${{ ... }}` expression, the script becomes:\n```shell\necho \"{\"add\":\"one\",\"remove\":[\"two\",\"three\"]}\"\n```\nwhich looks OK at first glance, but shells can actually understand it differently than expected\n(spaces added for clarity):\n```shell\necho \"{\" add \":\" one \",\" remove \":[\" two \",\" three \"]}\"\n```\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/ShellScriptInjection/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/ShellScriptInjection/",
+              "id": "ShellScriptInjection",
+              "name": "Shell script vulnerable to script injection.",
+              "shortDescription": {
+                "text": "Shell script vulnerable to script injection."
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "Using `${{ }}` in actions/github-script JavaScript is vulnerable to script injection.\nScript injection is when a user can control part of the script, and can inject arbitrary code.\nIn most cases this is a security vulnerability, but at the very least it's a bug.\nAll user input must be sanitized before being executed as JavaScript code.\n\nThe simplest way to achieve this is using environment variables to pass data as inputs to `script` code.\nNode know how to handle them: `process.env.XXX`.\nWith environment variables data travels in memory, rather than becoming part of the executable code.\n\nReferences:\n\n * [Understanding the risk of script injections](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#understanding-the-risk-of-script-injections)\n * [Stealing the job's `GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#stealing-the-jobs-github_token)",
+                "text": "See fullDescription markdown."
+              },
+              "help": {
+                "markdown": "Using `${{ }}` in actions/github-script JavaScript is vulnerable to script injection.\nScript injection is when a user can control part of the script, and can inject arbitrary code.\nIn most cases this is a security vulnerability, but at the very least it's a bug.\nAll user input must be sanitized before being executed as JavaScript code.\n\nThe simplest way to achieve this is using environment variables to pass data as inputs to `script` code.\nNode know how to handle them: `process.env.XXX`.\nWith environment variables data travels in memory, rather than becoming part of the executable code.\n\nReferences:\n\n * [Understanding the risk of script injections](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#understanding-the-risk-of-script-injections)\n * [Stealing the job's `GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#stealing-the-jobs-github_token)\n\n## Compliant example\n_`example.yml`_\n```yaml\non: push\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Remove prefix from PR title.\"\n        uses: actions/github-script@v7\n        env:\n          PR_TITLE: ${{ github.event.pull_request.title }}\n        with:\n          script: |\n            const title = process.env.PR_TITLE;\n            return title.replaceAll(/JIRA-\\d+ /, \"\");\n```\nScript injection is impossible, because the script is a static constant.\nThe input is provided via an Environment Variable, already typed as string.\n\n## Non-compliant example\n_`example.yml`_\n```yaml\non: pull_request\njobs:\n  example:\n    runs-on: ubuntu-latest\n    steps:\n      - name: \"Remove prefix from PR title.\"\n        uses: actions/github-script@v7\n        with:\n          script: |\n            const title = \"${{ github.event.pull_request.title }}\";\n            return title.replaceAll(/JIRA-\\d+ /, \"\");\n```\nScript injection breaks JavaScript execution.\n\nThe actual `script` input depends on the Pull Request's actual title.\nIn most cases, it'll be ok:\n```javascript\nconst title = \"JIRA-1234 Fix the thing\";\nreturn title.replaceAll(/JIRA-\\d+ /, \"\");\n```\n\nBut then there are a lot of titles which just break the syntax:\n\nIn the best case, it's a straight-up compilation error:\n```javascript\nconst title = \"JIRA-1234 Remove \" from logs\";\nreturn title.replaceAll(/JIRA-\\d+ /, \"\");\n```\nbut in the worst case, this can expose secrets or execute arbitrary code.\n\n---\nSee also the [online documentation](https://ghlint.twisterrob.net/issues/default/JSScriptInjection/).",
+                "text": "See help markdown."
+              },
+              "helpUri": "https://ghlint.twisterrob.net/issues/default/JSScriptInjection/",
+              "id": "JSScriptInjection",
+              "name": "JavaScript vulnerable to script injection.",
+              "shortDescription": {
+                "text": "JavaScript vulnerable to script injection."
+              }
+            }
+          ],
+          "semanticVersion": "0.5.0",
+          "version": "0.5.0"
+        }
+      }
+    }
+  ]
+}
