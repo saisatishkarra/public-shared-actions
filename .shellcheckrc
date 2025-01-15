@@ -1,7 +1,6 @@
 # Comma separated list of checks to ignore
 disable=SC2129
 
-shell=bash
 max-line-length=80
 
 # Ignore specific files or directories

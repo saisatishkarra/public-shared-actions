@@ -32,7 +32,7 @@ fi
 if [[ -n ${global_enforce_build_failure} ]]; then
     echo "global_enforce_build_failure=${global_enforce_build_failure}" >> "$GITHUB_OUTPUT"
 else
-    echo "::error ::set global_enforce_build_failure in $0"
+    echo '::error ::set global_enforce_build_failure in $0'
     exit 1
 fi
 

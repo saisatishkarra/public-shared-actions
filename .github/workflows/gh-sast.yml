@@ -3,44 +3,51 @@ name: GH Actions SAST
 on:
   pull_request: {}
   merge_group: {}
-  push:
-    paths:
-      - '.github/workflows/*'
+  push: {}
   workflow_dispatch: {}
 
 jobs:
 
-  lint:
+  shellcheck:
     runs-on: ubuntu-24.04
-    continue-on-error: true
-    name: Lint
+    name: shellcheck
     permissions:
       contents: read
       actions: read
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-      - uses: reviewdog/action-actionlint@f3dcc52bc6039e5d736486952379dce3e869e8a2
-        #with:
-          # # shellcheck is enabled on scripts using the run: block within workflows
-          # level: warnning
-          # # When used as required workflow in ruleset, this parameter has can block pushes
-          # fail_level: none
-      - uses: reviewdog/action-shellcheck@22f96e34e9185b642c5567cc26d1df952f5c9d10
+      - uses: reviewdog/action-shellcheck@6e0e63d1750d02d761b3df0f2c5ba9f9ac4a9ed7
         with:
-          # level: warnning
-          # fail_level: none'
-          reporter: "github-check"
+          # When used as required workflow in ruleset, this parameter has can block pushes
+          fail_level: error
+          # Run for all sh files even when not added/modified
+          filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
+          reporter: ${{ github.event_name == 'pull_request' && 'github-pr-check' || 'github-check' }}
           check_all_files_with_shebangs: "true"
+    
+  actionlint:
+    runs-on: ubuntu-24.04
+    name: actionlint
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        # shellcheck is enabled by default on scripts using the run: block within workflows
+      - uses: reviewdog/action-actionlint@f3dcc52bc6039e5d736486952379dce3e869e8a2
+        with:
+          # When used as required workflow in ruleset, this parameter has can block pushes
+          fail_level: any
+          # Run for all sh files even when not added/modified
+          filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
+          reporter: ${{ github.event_name == 'pull_request' && 'github-pr-check' || 'github-check' }}
 
   analyze-anti-patterns:
     runs-on: ubuntu-24.04
-    continue-on-error: true
     permissions:
       security-events: write # publish sbom to GH releases/tag assets
       actions: read
       contents: read
-    needs: lint
-    if: needs.lint.result == 'success'
     steps:
       # Helps to run the scan on a local directory at the triggered ref
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
