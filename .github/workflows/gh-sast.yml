@@ -8,9 +8,28 @@ on:
 
 jobs:
 
-  actionlint-all:
+  shellcheck:
     runs-on: ubuntu-24.04
     name: shellcheck
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - uses: reviewdog/action-shellcheck@6e0e63d1750d02d761b3df0f2c5ba9f9ac4a9ed7
+        with:
+          # When used as required workflow in ruleset, this parameter has can block pushes
+          fail_level: any
+          # Run for all sh files even when not added/modified
+          filter_mode: nofilter
+          #filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
+          reporter: ${{ github.event_name == 'pull_request' && 'github-pr-check' || 'github-check' }}
+          check_all_files_with_shebangs: "true"
+
+  ghlint:
+    runs-on: ubuntu-24.04
+    name: ghlint
     permissions:
       contents: read
       actions: read
@@ -25,7 +44,7 @@ jobs:
           gh release download --repo "TWiStErRob/net.twisterrob.ghlint" \
           "v${GHLINT_VERSION}" --pattern "ghlint.jar"
       
-      - name: "Run GH-Lint validation."
+      - name: "Run GH-Lint for workflows and composite actions"
         id: ghlint
         run: |
           java -jar ${RUNNER_TEMP}/ghlint.jar ${{env.args}} ${{env.scan_patterns}}
@@ -33,7 +52,7 @@ jobs:
           # Specific to psa structure. Make the below inputs
           scan_patterns: >-
             --ignore-failures
-            github/workflows/*.{yml,yaml}
+            .github/workflows/*.{yml,yaml}
             ./*/**/action.{yml,yaml} 
           args: >-
             --ghcommands 
@@ -55,25 +74,6 @@ jobs:
       #     checkout_path: ${{ github.workspace }}
       #     sarif_file: ${{ steps.ghlint.outputs.sarif-report }}
 
-  shellcheck:
-    runs-on: ubuntu-24.04
-    name: shellcheck
-    permissions:
-      contents: read
-      actions: read
-    steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-
-      - uses: reviewdog/action-shellcheck@6e0e63d1750d02d761b3df0f2c5ba9f9ac4a9ed7
-        with:
-          # When used as required workflow in ruleset, this parameter has can block pushes
-          fail_level: any
-          # Run for all sh files even when not added/modified
-          filter_mode: nofilter
-          #filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
-          reporter: ${{ github.event_name == 'pull_request' && 'github-pr-check' || 'github-check' }}
-          check_all_files_with_shebangs: "true"
-    
   actionlint:
     runs-on: ubuntu-24.04
     name: actionlint
