@@ -46,12 +46,13 @@ jobs:
       
       - name: "Run GH-Lint for workflows and composite actions"
         id: ghlint
+        continue-on-error: true
         run: |
           java -jar ${RUNNER_TEMP}/ghlint.jar ${{env.args}} ${{env.scan_patterns}}
         env:
           # Specific to psa structure. Make the below inputs
           scan_patterns: >-
-            --ignore-failures
+            --exit
             .github/workflows/*.{yml,yaml}
             ./*/**/action.{yml,yaml} 
           args: >-

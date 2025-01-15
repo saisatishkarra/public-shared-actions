@@ -139,7 +139,7 @@ runs:
         OUT_FILE: ${{ steps.meta.outputs.out_file}}
 
     - name: Fail on findings
-      if: ${{ always() && steps.semgrep.outcome == 'failure' && env.fail_build == 'true' }}
+      if: ${{ always() && steps.gh_actions_sast_plain.outcome == 'failure' && env.fail_build == 'true' }}
       shell: bash
       run: |
         echo "::error::Semgrep has detected findings. For findings, check workflow artifact: semgrep_sast.zip / Github Security analysis"
