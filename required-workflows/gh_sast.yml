@@ -1,0 +1,21 @@
+name: GH Actions SAST
+
+# Secrets are inherited from calling workflow within same org or enterprise
+# For all other outside wortkflows
+on:
+  pull_request: {}
+  
+jobs:
+  analyze-ci:
+    permissions:
+      contents: read
+      actions: read
+      # security-events: write # publish codeql results
+    uses: saisatishkarra/public-shared-actions/.github/workflows/gh-analyze.yml@feat/gh-anti-pattern-scan 
+    with:
+      FAIL_SHELLCHECK_LEVEL: ${{vars.FAIL_SHELLCHECK_LEVEL}}
+      FAIL_ACTIONLINT_LEVEL: ${{vars.FAIL_ACTIONLINT_LEVEL}}
+      FAIL_GHLINT: ${{vars.FAIL_GHLINT}}
+      FAIL_ZIZMOR: ${{vars.FAIL_ZIZMOR}}
+      GHLINT_FILES_SCAN_REGEX: >-
+        .github/workflows/*.yml
