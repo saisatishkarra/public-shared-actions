@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-readonly report_file_name="gh-ci-sast-report"
+readonly report_file_name="zizmor_antipattern_report"
 readonly json_ext="${report_file_name}.json"
 readonly sarif_ext="${report_file_name}.sarif"
 readonly out_ext="${report_file_name}.txt"
