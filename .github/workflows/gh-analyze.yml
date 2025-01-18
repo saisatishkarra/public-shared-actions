@@ -21,6 +21,9 @@ on:
         description: Space separated regex/paths to GH actions and workflow files
         required: true
         type: string
+    secrets:
+      TOKEN:
+        required: true
 
 # Permissions should be specified on calling workflow
 # Permissions specified here in reusable workflow can only be downgraded but elevated
@@ -32,6 +35,8 @@ jobs:
     name: shellcheck
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          token: ${{ secrets.TOKEN }}  # Use the passed token for checkout
 
       - uses: reviewdog/action-shellcheck@6e0e63d1750d02d761b3df0f2c5ba9f9ac4a9ed7
         with:
@@ -42,12 +47,16 @@ jobs:
           filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
           reporter: ${{ github.event_name == 'pull_request' && 'github-pr-check' || 'github-check' }}
           check_all_files_with_shebangs: "true"
+          github_token: ${{ secrets.TOKEN }}
 
   actionlint:
     runs-on: ubuntu-24.04
     name: actionlint
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          token: ${{ secrets.TOKEN }}  # Use the passed token for checkout
+
         # shellcheck is enabled by default on scripts using the run: block within workflows
       - uses: reviewdog/action-actionlint@f3dcc52bc6039e5d736486952379dce3e869e8a2
         with:
@@ -57,6 +66,7 @@ jobs:
           filter_mode: nofilter
           #filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
           reporter: ${{ github.event_name == 'pull_request' && 'github-pr-check' || 'github-check' }}
+          github_token: ${{ secrets.TOKEN }}
 
   ghlint:
     runs-on: ubuntu-24.04
@@ -66,11 +76,14 @@ jobs:
       GHLINT_REPO: TWiStErRob/net.twisterrob.ghlint
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          token: ${{ secrets.TOKEN }}  # Use the passed token for checkout
+
       - name: "Download GH-Lint"
         working-directory: ${{ runner.temp }}
         env:
           GHLINT_VERSION: '0.5.0'
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.TOKEN }}
         run: |
           gh release download --repo ${{env.GHLINT_REPO}} \
           "v${GHLINT_VERSION}" --pattern "ghlint.jar"
@@ -119,6 +132,8 @@ jobs:
     steps:
       # Helps to run the scan on a local directory at the triggered ref
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          token: ${{ secrets.TOKEN }}
       - name: Check GH anti-pattern using zizmor
         id: zizmor
         uses: saisatishkarra/public-shared-actions/security-actions/scan-gh-workflows@feat/gh-anti-pattern-scan
@@ -128,4 +143,4 @@ jobs:
           # When used as required workflow in ruleset, this parameter has can block pushes
           fail_on_findings: ${{inputs.FAIL_ZIZMOR}}
           codeql_upload: false
-          github_token: ${{github.token}}
+          github_token: ${{ secrets.TOKEN }}
