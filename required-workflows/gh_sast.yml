@@ -4,12 +4,13 @@ name: GH Actions SAST
 # For all other outside wortkflows
 on:
   pull_request: {}
-  
+
 jobs:
   analyze-ci:
     permissions:
       contents: read
       actions: read
+      pull_request: read
       # security-events: write # publish codeql results
     uses: saisatishkarra/public-shared-actions/.github/workflows/gh-analyze.yml@feat/gh-anti-pattern-scan 
     with:
@@ -19,3 +20,5 @@ jobs:
       FAIL_ZIZMOR: ${{vars.FAIL_ZIZMOR}}
       GHLINT_FILES_SCAN_REGEX: >-
         .github/workflows/*.yml
+    secrets:
+      token: ${{ secrets.TOKEN || github.token }}
