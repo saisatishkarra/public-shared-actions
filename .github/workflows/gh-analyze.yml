@@ -5,6 +5,14 @@ on:
   workflow_call:
 
     inputs:
+      TARGET_SCAN_REPOSITORY:
+        required: false
+        description: Target repository to scan
+        type: string
+      TARGET_SCAN_REF:
+        required: false
+        description: Target ref/branch to scan
+        type: string
       FAIL_SHELLCHECK_LEVEL:
         required: true
         type: string
@@ -20,6 +28,14 @@ on:
       GHLINT_FILES_SCAN_REGEX:
         description: Space separated regex/paths to GH actions and workflow files
         required: true
+        type: string
+      ZIZMOR_PERSONA:
+        description: zizmor sast analyzer audit persona
+        required: false
+        type: string
+      ZIZMOR_OFFLINE_AUDIT:
+        description: Run only zizmor sast analyzer offline audit checks
+        required: false
         type: string
     secrets:
       TOKEN:
@@ -37,6 +53,8 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           token: ${{ secrets.TOKEN }}  # Use the passed token for checkout
+          repository: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}
+          ref: ${{ inputs.TARGET_SCAN_REF || '' }}
 
       - uses: reviewdog/action-shellcheck@6e0e63d1750d02d761b3df0f2c5ba9f9ac4a9ed7
         with:
@@ -56,6 +74,8 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           token: ${{ secrets.TOKEN }}  # Use the passed token for checkout
+          repository: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}
+          ref: ${{ inputs.TARGET_SCAN_REF || '' }}
 
         # shellcheck is enabled by default on scripts using the run: block within workflows
       - uses: reviewdog/action-actionlint@f3dcc52bc6039e5d736486952379dce3e869e8a2
@@ -78,6 +98,8 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           token: ${{ secrets.TOKEN }}  # Use the passed token for checkout
+          repository: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}
+          ref: ${{ inputs.TARGET_SCAN_REF || '' }}
 
       - name: "Download GH-Lint"
         working-directory: ${{ runner.temp }}
@@ -129,18 +151,26 @@ jobs:
 
   gh-sast:
     runs-on: ubuntu-24.04
+    env:
+      REPO: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}
     steps:
       # Helps to run the scan on a local directory at the triggered ref
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           token: ${{ secrets.TOKEN }}
+          repository: ${{ env.REPO}}
+          ref: ${{ inputs.TARGET_SCAN_REF || '' }}
+          path: ${{ env.REPO }}
+
       - name: Check GH anti-pattern using zizmor
         id: zizmor
         uses: saisatishkarra/public-shared-actions/security-actions/scan-gh-workflows@feat/gh-anti-pattern-scan
         with:
-          scan_path: ${{github.workspace}}
-          persona: 'pedantic'
+          scan_path: ${{github.workspace}}/${{env.REPO}}
+          persona: ${{ inputs.ZIZMOR_PERSONA || 'pedantic' }}
+          offline_audit_checks: ${{ inputs.ZIZMOR_OFFLINE_AUDIT || 'true' }}
           # When used as required workflow in ruleset, this parameter has can block pushes
           fail_on_findings: ${{inputs.FAIL_ZIZMOR}}
           codeql_upload: false
           github_token: ${{ secrets.TOKEN }}
+          asset_prefix: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}

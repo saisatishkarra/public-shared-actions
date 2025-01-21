@@ -18,10 +18,10 @@ is_remote_repo() {
 }
 
 if [[ -n ${ASSET_PREFIX} ]]; then
-    echo "report_file_name=${ASSET_PREFIX##*/}-${report_file_name}" >> "$GITHUB_OUTPUT"
-    echo "json_file=${ASSET_PREFIX##*/}-${json_ext}" >> "$GITHUB_OUTPUT"
-    echo "sarif_file=${ASSET_PREFIX##*/}-${sarif_ext}" >> "$GITHUB_OUTPUT"
-    echo "out_file=${ASSET_PREFIX##*/}-${out_ext}" >> "$GITHUB_OUTPUT"
+    echo "report_file_name=${ASSET_PREFIX##*/}_${report_file_name}" >> "$GITHUB_OUTPUT"
+    echo "json_file=${ASSET_PREFIX##*/}_${json_ext}" >> "$GITHUB_OUTPUT"
+    echo "sarif_file=${ASSET_PREFIX##*/}_${sarif_ext}" >> "$GITHUB_OUTPUT"
+    echo "out_file=${ASSET_PREFIX##*/}_${out_ext}" >> "$GITHUB_OUTPUT"
 else
     echo "report_file_name=${report_file_name}" >> "$GITHUB_OUTPUT"
     echo "json_file=${json_ext}" >> "$GITHUB_OUTPUT"
