@@ -126,7 +126,7 @@ runs:
     #   env:
     #     OUT_FILE: ${{ steps.meta.outputs.out_file}}
 
-    - name: Print to console out
+    - name: Print findings to console out
       if: always() 
       shell: bash
       run: |

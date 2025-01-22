@@ -37,6 +37,14 @@ on:
         description: Run only zizmor sast analyzer offline audit checks
         required: false
         type: string
+      ASSET_PREFIX:
+        description: Prefix for workflow assets files
+        required: false
+        type: string
+      CODEQL_UPLOAD:
+        description: Upload results to codeql for public repositories
+        required: false
+        type: string
     secrets:
       TOKEN:
         required: true
@@ -45,61 +53,78 @@ on:
 # Permissions specified here in reusable workflow can only be downgraded but elevated
 permissions: {}
 
+env:
+  repository: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}
+  ref: ${{ inputs.TARGET_SCAN_REF || '' }}
+  asset_prefix: ${{ inputs.ASSET_PREFIX || '' }}
+  filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
+  reporter: ${{ github.event_name == 'pull_request' && 'github-pr-check' || 'github-check' }}
+  codeql_upload: ${{ inputs.CODEQL_UPLOAD == 'true' && github.event.repository.visibility == 'public' && 'true' || 'false' }}
+
 jobs:
+  
+  metadata:
+    runs-on: ubuntu-24.04
+    name: metadata
+    steps:
+      - run: |
+          echo "Analyzing Repository: ${{env.repository}}@${{env.ref}}"
+          echo "Asset Prefix: ${{env.ASSET_PREFIX}}"
+
   shellcheck:
     runs-on: ubuntu-24.04
     name: shellcheck
+    needs: [metadata]
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           token: ${{ secrets.TOKEN }}  # Use the passed token for checkout
-          repository: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}
-          ref: ${{ inputs.TARGET_SCAN_REF || '' }}
+          repository: ${{ env.repository }}
+          ref: ${{ env.ref }}
 
       - uses: reviewdog/action-shellcheck@6e0e63d1750d02d761b3df0f2c5ba9f9ac4a9ed7
         with:
           # When used as required workflow in ruleset, this parameter has can block pushes
-          fail_level: ${{inputs.FAIL_SHELLCHECK_LEVEL}}
-          # Run for all sh files even when not added/modified
-          #filter_mode: nofilter
-          filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
-          reporter: ${{ github.event_name == 'pull_request' && 'github-pr-check' || 'github-check' }}
+          filter_mode: ${{ env.filter_mode }}
+          reporter: ${{ env.reporter }}
           check_all_files_with_shebangs: "true"
+          fail_level: ${{inputs.FAIL_SHELLCHECK_LEVEL}}
           github_token: ${{ secrets.TOKEN }}
 
   actionlint:
     runs-on: ubuntu-24.04
     name: actionlint
+    needs: [metadata]
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           token: ${{ secrets.TOKEN }}  # Use the passed token for checkout
-          repository: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}
-          ref: ${{ inputs.TARGET_SCAN_REF || '' }}
+          repository: ${{ env.repository }}
+          ref: ${{ env.ref }}
 
         # shellcheck is enabled by default on scripts using the run: block within workflows
       - uses: reviewdog/action-actionlint@f3dcc52bc6039e5d736486952379dce3e869e8a2
         with:
           # When used as required workflow in ruleset, this parameter has can block pushes
           fail_level: ${{inputs.FAIL_ACTIONLINT_LEVEL}}
-          # Run for all sh files even when not added/modified
-          filter_mode: nofilter
-          #filter_mode: ${{ github.event_name == 'pull_request' && 'file' || 'nofilter' }}
-          reporter: ${{ github.event_name == 'pull_request' && 'github-pr-check' || 'github-check' }}
+          # Run for all sh files even when not added/modifier
+          filter_mode: ${{ env.filter_mode }}
+          reporter: ${{ env.reporter }}
           github_token: ${{ secrets.TOKEN }}
 
   ghlint:
     runs-on: ubuntu-24.04
     name: ghlint
+    needs: [metadata]
     env:
-      REPORT_FILE_NAME: ghlint_report
+      REPORT_NAME: ${{ inputs.ASSET_PREFIX!= '' && format('{0}_{1}', inputs.ASSET_PREFIX, 'ghlint_report') || 'ghlint_report' }}
       GHLINT_REPO: TWiStErRob/net.twisterrob.ghlint
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           token: ${{ secrets.TOKEN }}  # Use the passed token for checkout
-          repository: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}
-          ref: ${{ inputs.TARGET_SCAN_REF || '' }}
+          repository: ${{env.repository}}
+          ref: ${{ env.ref }}
 
       - name: "Download GH-Lint"
         working-directory: ${{ runner.temp }}
@@ -120,17 +145,27 @@ jobs:
           args: >-
             --exit
             --ghcommands
-            --sarif=${{env.REPORT_FILE_NAME}}.sarif
+            --sarif=${{env.REPORT_NAME}}.sarif
 
       - name: Upload GH lint report to Workflow
         if: always() && steps.ghlint.conclusion == 'success'
         uses: actions/upload-artifact@v4
         with:
-          name: ${{env.REPORT_FILE_NAME}}.zip
+          name: ${{env.REPORT_NAME}}.zip
           path: |
-            ${{env.REPORT_FILE_NAME}}.sarif
+            ${{ steps.ghlint.outputs.sarif-report }}
           if-no-files-found: warn
-      
+
+      - name: "Publish 'GH-Lint' GitHub Code Scanning analysis."
+        if: ${{ always() && env.codeql_upload == 'true' }}
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: ${{ steps.ghlint.outputs.sarif-report }}
+          # Optional category for the results
+          # Used to differentiate multiple results for one commit
+          category: ghlint
+
       - name: Fail on findings
         if: always()
         run: |
@@ -141,36 +176,28 @@ jobs:
         env: 
           SCAN_STATUS: ${{ steps.ghlint.outcome }}
           FAIL_BUILD: "${{inputs.FAIL_GHLINT}}"
-          
-      # - name: "Publish 'GH-Lint' GitHub Code Scanning analysis."
-      #   if: ${{  }}
-      #   uses: github/codeql-action/upload-sarif@v3
-      #   with:
-      #     checkout_path: ${{ github.workspace }}
-      #     sarif_file: ${{ steps.ghlint.outputs.sarif-report }}
 
   gh-sast:
     runs-on: ubuntu-24.04
-    env:
-      REPO: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}
+    needs: [metadata]
     steps:
       # Helps to run the scan on a local directory at the triggered ref
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           token: ${{ secrets.TOKEN }}
-          repository: ${{ env.REPO}}
-          ref: ${{ inputs.TARGET_SCAN_REF || '' }}
-          path: ${{ env.REPO }}
+          repository: ${{ env.repository}}
+          ref: ${{ env.ref }}
+          path: ${{ env.repository }}
 
       - name: Check GH anti-pattern using zizmor
         id: zizmor
         uses: saisatishkarra/public-shared-actions/security-actions/scan-gh-workflows@feat/gh-anti-pattern-scan
         with:
-          scan_path: ${{github.workspace}}/${{env.REPO}}
+          scan_path: ${{github.workspace}}/${{env.repository}}
           persona: ${{ inputs.ZIZMOR_PERSONA || 'pedantic' }}
           offline_audit_checks: ${{ inputs.ZIZMOR_OFFLINE_AUDIT || 'true' }}
           # When used as required workflow in ruleset, this parameter has can block pushes
           fail_on_findings: ${{inputs.FAIL_ZIZMOR}}
-          codeql_upload: false
+          codeql_upload: ${{ env.codeql_upload }}
           github_token: ${{ secrets.TOKEN }}
-          asset_prefix: ${{ inputs.TARGET_SCAN_REPOSITORY || github.repository }}
+          asset_prefix: ${{ env.asset_prefix }}
